@@ -8,6 +8,271 @@
 /* ---------------------HEADER---------------------*/
 
 header {
+    background-color: var(--primary-bg-color-black);
     padding: 0.3vw 0vw;
-    background-color: var(--primary-bg-color);
   }
+
+  #navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .a-logo {
+    font-size: max(1.1vw, 6px);
+    color: var(--primary-bg-color-white);
+    font-weight: 600;
+    margin-left: 3vw;
+    text-decoration: none;
+  }
+
+  .img-logo {
+    max-width: max(10vw, 100px);
+    height: auto;
+  }
+
+  #navbar-nav {
+    margin-right: 2vw;
+  }
+
+  .ul-nav {
+    align-items: center;
+    display: flex;
+    align-items: center;
+  }
+
+  #navbar-nav ul li a {
+    display: block;
+    margin-right: max(2vw, 2px);
+    padding: 0.3vw 1vw;
+    -moz-user-select: none;
+    /* Firefox */
+    -webkit-user-select: none;
+    /* Chrome, Safari, Opéra depuis la version 15 */
+    -ms-user-select: none;
+    /* Internet explorer depuis la version 10 et Edge */
+    user-select: none;
+    /* Propriété standard */
+  }
+
+  .home-nav, .company-nav, .portfolio-nav, .product-nav, .blog-nav {
+    color: var(--primary-bg-color-white);
+    font-size: max(0.82vw, 13px);
+    font-weight: bold;
+    text-align: center;
+    border-bottom: 1px solid #4d99c5;
+  }
+
+  .hamburger {
+    display: none;
+  }
+  
+  .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: var(--primary-bg-color-white);
+  }
+
+
+
+  .container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .container .btn{
+    position: relative;
+    width: 130px;
+    height: 30px;
+    margin: 20px;
+}
+/*Taille et marge des boutons*/
+
+.container .btn a{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    color: #fff;
+    z-index: 1;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-decoration: none;
+    overflow: hidden;
+    transition: 1s; /*Vitesse de l'agrandissement du texte*/
+    backdrop-filter: blur(15px);
+}
+/*
+backdrop-filter: 
+blur(15px); ajoute un blur (rouge ici) sur la bordure du bas.
+La propriété CSS backdrop-filter permet d'obtenir un effet de flou ou de diffusion de la couleur sur la zone derrière l'élément. 
+L'effet étant situé derrière l'élément, il pourra être observé en ajustant la transparence de l'élément.
+pour l'instant (2021) non pris en charge par firefox et internet explorer.
+
+overflow:
+La propriété CSS overflow est une propriété raccourcie qui définit comment gérer le dépassement du contenu d'un élément dans son bloc. 
+Elle définit les valeurs des propriétés overflow-x et overflow-y.
+
+Recentre les boutons, crée leur fond, leur ombre, leur bordure (top/bottom), règle leur texte, place leur position z-index
+*/
+
+.container .btn:hover a{
+    letter-spacing: 5px; /*les lettres s'écartent au passage du curseur*/
+}
+
+.container .btn a::before{
+    content:  '';
+    position: absolute;
+    top: 0; /*Positionne le dégradé*/
+    left: 0; /*Positionne le dégradé*/
+    width: 40%; /*Largeur dégradé*/
+    height: 100%; /*Hauteur dégradé*/
+    background: linear-gradient(to left, rgba(255, 255, 255, 0.10), transparent);
+    transform: skewX(45deg) translateX(0%); /*Inclinaison du dégradé="skewX" longueur du dégradé à partir du centre (width:50%) ="translateX" */
+    transition: 0.5s; /*Effet de transition du dégardé au passage du curseur*/
+}
+/*
+Crée le dégradé
+
+::before crée un pseudo-élément qui sera le premier enfant de l'élément ciblé. 
+Généralement utilisé pour ajouter du contenu esthétique à un élément via la propriété CSS content. 
+Par défaut, l'élément créé est de type en-ligne (inline).
+ex:
+
+HTML
+<q>Quelques guillemets</q>, dit-il, <q>sont mieux que pas du tout</q>
+
+CSS
+q::before {
+  content: "«";
+  color: blue;
+}
+q::after {
+  content: '»';
+  color: red;
+}
+
+Résultat:
+«Quelques guillemets», dit-il, «sont mieux que pas du tout»
+Les guillemets sont remplacés, ceux de gauche sont en bleus et ceux de droite en rouges
+*/
+
+.container .btn:hover a::before{
+    transform: skewX(45deg) translateX(220%);  /*Le dégradé se déplace vers la droite quand le curseur passe dessus*/
+}
+
+/*BORDURE BAS*/
+.container .btn::before{
+    content:  ''; /*Si supprimé fait diparaître la bordure*/
+    position: absolute;
+    left: 50%; /*Position de la bordure par rapport au bouton (ici 50%=centré)*/
+    transform: translateX(-50%); /*Centre bien la bordure*/
+    bottom: -2px; /*Positionne verticalement la bordure plus la valeur négative est élevée, plus la bordure s'éloigne du bouton. L'effet de transition reste sur le bouton (donne un effet sympa)*/
+    width: 110px; /*Largeur de la bordure*/
+    height: 1px; /*Hauteur de la bordure*/
+    border-radius:  20px; /*border-radius bordure*/
+    transition: 0.5s; /*Vitesse transition quand le curseur passe dessus*/
+    transition-delay: 0s; /*Délai avant que la transition revienne à son état initial*/
+}
+
+.container .btn:hover::before{
+    bottom: 0; /*la bordure du bas remonte entierement sur le bouton quand le curseur passe dessus (changer cette valeur fait dépasser l'effet de transition du bouton rendant la bordure du bouton apparente avec une ombre)*/
+    height: 65%; /*la hauteur du blur augmente ici jusqu'à 50% pendant l'effet de transition, quand le curseur passe dessus*/
+    width: 100%; /*idem avec la largeur*/
+    border-radius: 20px; /*border-radius de l'effet de transition*/
+    transition-delay: 0.5s; /*Retarde l'effet avec le blur*/
+}
+
+
+/*BORDURE HAUT*/
+.container .btn::after{
+    content:  ''; /*Si supprimé fait diparaître la bordure*/
+    position: absolute;
+    left: 50%; /*Position de la bordure par rapport au bouton (ici 50%=centré)*/
+    transform: translateX(-50%);
+    top: 0px; /*Positionne verticalement la bordure plus la valeur négative est élevée, plus la bordure s'éloigne du bouton. L'effet de transition reste sur le bouton (donne un effet sympa)*/
+    width: 110px; /*Largeur de la bordure*/
+    height: 1px; /*Hauteur de la bordure*/
+    border-radius:  20px; /*border-radius bordure*/
+    transition: 0.5s;  /*Vitesse transition quand le curseur passe dessus*/
+    transition-delay: 0s; /*Délai avant que la transition revienne à son état initial*/
+}
+
+.container .btn:hover::after{
+    top: 0; /*la bordure du haut disparaît derrière le bouton quand le curseur passe dessus*/
+    height: 65%; /*la hauteur du blur augmente quand le curseur passe dessus*/
+    width: 100%; /*idem avec la largeur*/
+    border-radius: 20px; /*border-radius de l'effet de transition*/
+    transition-delay: 0.5s; /*Retarde l'effet avec le blur*/
+}
+
+.container .btn::before, 
+.container .btn::after{
+    background: #2bd2ff;
+    box-shadow: 0 0 5px #2bd2ff,
+    0 0 10px #2bd2ff,
+    0 0 25px #2bd2ff,
+    0 0 50px #2bd2ff;
+}
+
+  /* ----------X----------FIN HEADER----------X----------*/
+
+
+
+  
+
+
+  /* ---------------------MEDIAQUERIES---------------------*/
+
+@media only screen and (max-width: 768px) {
+  .ul-nav {
+    position: fixed;
+    left: -100%;
+    top: 53px;
+    flex-direction: column;
+    background-color: var(--primary-bg-color-black);
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    z-index: 10;
+  }
+  .ul-nav.active {
+    left: 0;
+  }
+  .li-nav {
+    margin: 2vw 0vw;
+  }
+  .hamburger {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    top: 1px;
+    right: 20px;
+  }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
+
+/* ----------X----------FIN MEDIAQUERIES----------X----------*/
