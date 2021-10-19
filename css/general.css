@@ -1,9 +1,11 @@
 :root {
     /* ---------------Variable couleur----------------- */
-    --primary-bg-color: rgb(0,0,0);
+    --primary-bg-color-black: rgb(0,0,0);
+    --primary-bg-color-white: rgb(255,255,255);
     --secondary-bg-color: rgb(1,23,49);
-    --teriary-bg-color: rgb(120,206,255);
-    --quaternary-bg-color: rgb(91,206,255);
+    --teriary-bg-color: rgb(71,108,141);
+    --quaternary-bg-color: rgb(120,206,255);
+    --quinternary-bg-color: rgb(91,206,255);
     /* ---------------Variable font-size--------------- */
     --title-size: 24px;
     --sous-title-size: 20px;
