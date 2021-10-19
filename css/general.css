@@ -1,0 +1,27 @@
+:root {
+    /* ---------------Variable couleur----------------- */
+    --primary-bg-color: rgb(0,0,0);
+    --secondary-bg-color: rgb(1,23,49);
+    --teriary-bg-color: rgb(120,206,255);
+    --quaternary-bg-color: rgb(91,206,255);
+    /* ---------------Variable font-size--------------- */
+    --title-size: 24px;
+    --sous-title-size: 20px;
+    --text-size: 16px;
+    /* ---------------Variable font-family------------- */
+    --font1: roboto;
+    --font2: arial;
+    --font3: cursive;
+}
+.column{
+    display: flex;
+    flex-direction: column;
+}
+.row{
+    display: flex;
+    flex-direction: row;
+}
+.center{
+    justify-content: center;
+    align-items: center;
+}
