@@ -4,3 +4,35 @@
     box-sizing: border-box;
 }
 
+section h1{
+    color: var(--quinternary-bg-color);
+    font-family: var(--font2);
+    font-size: var(--title-size);
+}
+section h2, section p{
+    color: var(--primary-bg-color-white);
+    font-family: var(--font1);
+}
+/* ------------------------ 1ere section-------------------- */
+.section1{
+    background: linear-gradient(180deg, var(--secondary-bg-color), var(--teriary-bg-color));
+}
+/* ------------------------ 2eme section-------------------- */
+.section2{
+    background: linear-gradient(90deg, var(--teriary-bg-color) 50%, transparent) 100%; 
+    background-image: url("/Asset/geforce-ampere-rtx-games-background-image-spec2-bb580_440-t@2x.jpg");
+    background-repeat: no-repeat;
+    background-position: right 0% top 0%;
+    background-size: 75%;
+    height: 50px;
+}
+.section2 .image-bg{
+}
+/* ------------------------ 3eme section-------------------- */
+.section3{
+    background: linear-gradient(0deg, var(--secondary-bg-color), var(--teriary-bg-color));
+}
+/* ------------------------ 4eme section-------------------- */
+.section4{
+    background: linear-gradient(180deg, var(--secondary-bg-color), var(--teriary-bg-color));
+}
