@@ -13,9 +13,9 @@
     --teriary-bg-color-opacity2: rgb(71,108,141, 0.5);
 
     /* ---------------Variable font-size--------------- */
-    --title-size: 24px;
-    --sous-title-size: 20px;
-    --text-size: 16px;
+    --title-size: 1.8em;
+    --sous-title-size: 1.4em;
+    --text-size: 1em;
     /* ---------------Variable font-family------------- */
     --font1: roboto;
     --font2: cursive;
