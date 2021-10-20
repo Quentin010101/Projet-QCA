@@ -6,21 +6,23 @@
 html{
     scroll-behavior: smooth;
 }
+body{
+    background-image: url("/Asset/circuits3b.png");
+}
 section{
     width: 100%;
     height: 100vh;
 }
 section h1{
     color: var(--quinternary-bg-color);
-    font-family: var(--font2);
-    font-size: var(--title-size);
+    font-family: var(--font1);
+    font-size: calc(var(--title-size) + 24px);
 }
 section h2, section p, section span, section button{
     color: var(--primary-bg-color-white);
-    font-family: var(--font1);
 }
 .container-image img{
-    width: 90%;
+    width: 100%;
 }
 .container-button{
     font-size: var(--text-size);
@@ -50,13 +52,18 @@ section h2, section p, section span, section button{
 }
 .container-text h2{
     margin: 0 1em;
+    font-family: var(--font2);
+    font-size: calc(var(--title-size) + 12px);
 }
 .container-text p{
     margin: 1.5em 0;
+    font-family: var(--font3);
+    font-size: calc(var(--text-size) + 6px)
 }
 /* ------------------------ 1ere section-------------------- */
 .section1{
-    background: linear-gradient(180deg, var(--secondary-bg-color), var(--teriary-bg-color));
+    background: linear-gradient(180deg, var(--secondary-bg-color-opacity), var(--teriary-bg-color-opacity));
+    
     align-items: center;
     padding: 0 2%;
     justify-content: space-evenly;
@@ -64,19 +71,21 @@ section h2, section p, section span, section button{
 /* ------------------------ 2eme section-------------------- */
 .section2{
     background-image: url("/Asset/geforce-ampere-rtx-games-background-image-spec2-bb580_440-t@2x.jpg");
+    opacity: 0.9;
     background-repeat: no-repeat;
     background-position: right 0% top 0%;
     background-size: 75% 100%;
-    height: 50vh;
+    max-height: 50vh;
 }
 .section2 .image-bg{
     height: 100%;
     width: 100%;
-    background: linear-gradient(90deg, var(--teriary-bg-color) 50%, transparent 100%);  
+    background: linear-gradient(90deg, var(--teriary-bg-color) 30%, var(--teriary-bg-color-opacity) 50%, transparent 100%), 
+                linear-gradient(0deg, var(--teriary-bg-color) 0%, var(--teriary-bg-color-opacity2) 20%, transparent 50%, var(--teriary-bg-color-opacity2) 80%, var(--teriary-bg-color) 100%);  
 }
 /* ------------------------ 3eme section-------------------- */
 .section3{
-    background: linear-gradient(0deg, var(--secondary-bg-color), var(--teriary-bg-color));
+    background: linear-gradient(0deg, var(--secondary-bg-color-opacity), var(--teriary-bg-color-opacity));
     align-items: center;
     padding: 0 2%;
     justify-content: space-evenly;
@@ -108,7 +117,7 @@ section h2, section p, section span, section button{
 }
 /* ------------------------ 4eme section-------------------- */
 .section4{
-    background: linear-gradient(180deg, var(--secondary-bg-color), var(--teriary-bg-color));
+    background: linear-gradient(180deg, var(--secondary-bg-color-opacity), var(--teriary-bg-color-opacity));
     align-items: center;
     padding: 0 2%;
     justify-content: space-evenly;
@@ -119,6 +128,9 @@ section h2, section p, section span, section button{
 
 
 /* ------------------------ Media Query -------------------- */
-@media (max-width: 1000px){
-    
+@media (max-width: 800px){
+    .section1, .section3{
+        display: flex;
+        flex-direction: column;
+    }
 }
