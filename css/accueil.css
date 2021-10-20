@@ -22,7 +22,10 @@
 
 header {
     background-color: var(--primary-bg-color-black);
-    border-bottom: 2px solid #2bd1ff;
+    border-bottom: 1px solid #2bd1ff;
+    backdrop-filter: blur(100px);
+    -webkit-backdrop-filter: blur(100px);
+    box-shadow: 0px 0px 20px 4px #2bd1ff;
   }
 
   #navbar {
