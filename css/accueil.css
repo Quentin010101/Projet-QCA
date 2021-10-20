@@ -3,13 +3,26 @@
     padding: 0;
     box-sizing: inherit;
   }
+  
 
 
-/* ---------------------HEADER---------------------*/
+  body{
+    background-image: url("../Asset/circuits3b.png");
+	  background-attachment: scroll;
+	  background-repeat: repeat;
+	  width: 100%;
+	  margin: 0;
+  }
+
+  section{
+    background-color: rgba(1, 23, 49, 0.747);
+    height: 100vh;
+  }
+  
 
 header {
     background-color: var(--primary-bg-color-black);
-    padding: 0.3vw 0vw;
+    border-bottom: 2px solid #2bd1ff;
   }
 
   #navbar {
@@ -27,8 +40,9 @@ header {
   }
 
   .img-logo {
-    max-width: max(10vw, 100px);
+    max-width: max(7vw, 90px);
     height: auto;
+    padding: 5px 0vw;
   }
 
   #navbar-nav {
@@ -42,9 +56,6 @@ header {
   }
 
   #navbar-nav ul li a {
-    display: block;
-    margin-right: max(2vw, 2px);
-    padding: 0.3vw 1vw;
     -moz-user-select: none;
     /* Firefox */
     -webkit-user-select: none;
@@ -55,12 +66,15 @@ header {
     /* Propriété standard */
   }
 
-  .home-nav, .company-nav, .portfolio-nav, .product-nav, .blog-nav {
+  .home-nav, .product-nav, .recrut-nav, .shopping-nav {
     color: var(--primary-bg-color-white);
     font-size: max(0.82vw, 13px);
     font-weight: bold;
     text-align: center;
-    border-bottom: 1px solid #4d99c5;
+  }
+
+  .panier{
+    margin: 5px 5px 0px 20px;
   }
 
   .hamburger {
@@ -78,7 +92,7 @@ header {
   }
 
 
-
+/* ---------------------BUTTON---------------------*/
   .container{
     display: flex;
     flex-wrap: wrap;
@@ -89,9 +103,8 @@ header {
     position: relative;
     width: 130px;
     height: 30px;
-    margin: 20px;
+    margin-left: 20px;
 }
-/*Taille et marge des boutons*/
 
 .container .btn a{
     position: absolute;
@@ -102,36 +115,22 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.1);
     box-shadow: 0 15px 35px rgba(0,0,0,0.2);
     border-top: 1px solid rgba(255, 255, 255, 0.1);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0);
     color: #fff;
     z-index: 1;
     font-weight: 400;
     letter-spacing: 1px;
     text-decoration: none;
     overflow: hidden;
-    transition: 1s; /*Vitesse de l'agrandissement du texte*/
+    transition: 0.5s; /*Vitesse de l'agrandissement du texte*/
     backdrop-filter: blur(15px);
 }
-/*
-backdrop-filter: 
-blur(15px); ajoute un blur (rouge ici) sur la bordure du bas.
-La propriété CSS backdrop-filter permet d'obtenir un effet de flou ou de diffusion de la couleur sur la zone derrière l'élément. 
-L'effet étant situé derrière l'élément, il pourra être observé en ajustant la transparence de l'élément.
-pour l'instant (2021) non pris en charge par firefox et internet explorer.
-
-overflow:
-La propriété CSS overflow est une propriété raccourcie qui définit comment gérer le dépassement du contenu d'un élément dans son bloc. 
-Elle définit les valeurs des propriétés overflow-x et overflow-y.
-
-Recentre les boutons, crée leur fond, leur ombre, leur bordure (top/bottom), règle leur texte, place leur position z-index
-*/
 
 .container .btn:hover a{
-    letter-spacing: 5px; /*les lettres s'écartent au passage du curseur*/
+    letter-spacing: 4px;
 }
 
 .container .btn a::before{
@@ -139,40 +138,15 @@ Recentre les boutons, crée leur fond, leur ombre, leur bordure (top/bottom), r�
     position: absolute;
     top: 0; /*Positionne le dégradé*/
     left: 0; /*Positionne le dégradé*/
-    width: 40%; /*Largeur dégradé*/
+    width: 30%; /*Largeur dégradé*/
     height: 100%; /*Hauteur dégradé*/
-    background: linear-gradient(to left, rgba(255, 255, 255, 0.10), transparent);
+    background: linear-gradient(to left, rgba(255, 255, 255, 0.08), transparent);
     transform: skewX(45deg) translateX(0%); /*Inclinaison du dégradé="skewX" longueur du dégradé à partir du centre (width:50%) ="translateX" */
-    transition: 0.5s; /*Effet de transition du dégardé au passage du curseur*/
+    transition: 0.1s; /*Effet de transition du dégardé au passage du curseur*/
 }
-/*
-Crée le dégradé
-
-::before crée un pseudo-élément qui sera le premier enfant de l'élément ciblé. 
-Généralement utilisé pour ajouter du contenu esthétique à un élément via la propriété CSS content. 
-Par défaut, l'élément créé est de type en-ligne (inline).
-ex:
-
-HTML
-<q>Quelques guillemets</q>, dit-il, <q>sont mieux que pas du tout</q>
-
-CSS
-q::before {
-  content: "«";
-  color: blue;
-}
-q::after {
-  content: '»';
-  color: red;
-}
-
-Résultat:
-«Quelques guillemets», dit-il, «sont mieux que pas du tout»
-Les guillemets sont remplacés, ceux de gauche sont en bleus et ceux de droite en rouges
-*/
 
 .container .btn:hover a::before{
-    transform: skewX(45deg) translateX(220%);  /*Le dégradé se déplace vers la droite quand le curseur passe dessus*/
+    transform: skewX(45deg) translateX(260%);  /*Le dégradé se déplace vers la droite quand le curseur passe dessus*/
 }
 
 /*BORDURE BAS*/
@@ -181,11 +155,10 @@ Les guillemets sont remplacés, ceux de gauche sont en bleus et ceux de droite e
     position: absolute;
     left: 50%; /*Position de la bordure par rapport au bouton (ici 50%=centré)*/
     transform: translateX(-50%); /*Centre bien la bordure*/
-    bottom: -2px; /*Positionne verticalement la bordure plus la valeur négative est élevée, plus la bordure s'éloigne du bouton. L'effet de transition reste sur le bouton (donne un effet sympa)*/
-    width: 110px; /*Largeur de la bordure*/
+    bottom: -4px; /*Positionne verticalement la bordure plus la valeur négative est élevée, plus la bordure s'éloigne du bouton. L'effet de transition reste sur le bouton (donne un effet sympa)*/
+    width: 130px; /*Largeur de la bordure*/
     height: 1px; /*Hauteur de la bordure*/
-    border-radius:  20px; /*border-radius bordure*/
-    transition: 0.5s; /*Vitesse transition quand le curseur passe dessus*/
+    transition: 0.3s; /*Vitesse transition quand le curseur passe dessus*/
     transition-delay: 0s; /*Délai avant que la transition revienne à son état initial*/
 }
 
@@ -193,8 +166,7 @@ Les guillemets sont remplacés, ceux de gauche sont en bleus et ceux de droite e
     bottom: 0; /*la bordure du bas remonte entierement sur le bouton quand le curseur passe dessus (changer cette valeur fait dépasser l'effet de transition du bouton rendant la bordure du bouton apparente avec une ombre)*/
     height: 65%; /*la hauteur du blur augmente ici jusqu'à 50% pendant l'effet de transition, quand le curseur passe dessus*/
     width: 100%; /*idem avec la largeur*/
-    border-radius: 20px; /*border-radius de l'effet de transition*/
-    transition-delay: 0.5s; /*Retarde l'effet avec le blur*/
+    transition-delay: 0.3s; /*Retarde l'effet avec le blur*/
 }
 
 
@@ -204,11 +176,10 @@ Les guillemets sont remplacés, ceux de gauche sont en bleus et ceux de droite e
     position: absolute;
     left: 50%; /*Position de la bordure par rapport au bouton (ici 50%=centré)*/
     transform: translateX(-50%);
-    top: 0px; /*Positionne verticalement la bordure plus la valeur négative est élevée, plus la bordure s'éloigne du bouton. L'effet de transition reste sur le bouton (donne un effet sympa)*/
-    width: 110px; /*Largeur de la bordure*/
+    top: -2px; /*Positionne verticalement la bordure plus la valeur négative est élevée, plus la bordure s'éloigne du bouton. L'effet de transition reste sur le bouton (donne un effet sympa)*/
+    width: 130px; /*Largeur de la bordure*/
     height: 1px; /*Hauteur de la bordure*/
-    border-radius:  20px; /*border-radius bordure*/
-    transition: 0.5s;  /*Vitesse transition quand le curseur passe dessus*/
+    transition: 0.3s;  /*Vitesse transition quand le curseur passe dessus*/
     transition-delay: 0s; /*Délai avant que la transition revienne à son état initial*/
 }
 
@@ -216,20 +187,20 @@ Les guillemets sont remplacés, ceux de gauche sont en bleus et ceux de droite e
     top: 0; /*la bordure du haut disparaît derrière le bouton quand le curseur passe dessus*/
     height: 65%; /*la hauteur du blur augmente quand le curseur passe dessus*/
     width: 100%; /*idem avec la largeur*/
-    border-radius: 20px; /*border-radius de l'effet de transition*/
-    transition-delay: 0.5s; /*Retarde l'effet avec le blur*/
+    transition-delay: 0.3s; /*Retarde l'effet avec le blur*/
 }
 
 .container .btn::before, 
 .container .btn::after{
-    background: #2bd2ff;
+    background: #2bd1ff;
     box-shadow: 0 0 5px #2bd2ff,
     0 0 10px #2bd2ff,
-    0 0 25px #2bd2ff,
-    0 0 50px #2bd2ff;
+    0 0 15px #2bd2ff,
+    0 0 30px #2bd2ff;
 }
+ /* ----------X----------FIN BUTTON----------X----------*/
 
-  /* ----------X----------FIN HEADER----------X----------*/
+/* ----------X----------FIN HEADER----------X----------*/
 
 
 
