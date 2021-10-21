@@ -1,28 +1,15 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
-  }
-  
-  body {
-    background-image: url("../Asset/circuits3b.png");
-    background-attachment: scroll;
-    background-repeat: repeat;
-    width: 100%;
-    margin: 0;
-  }
-
-
 
   /* ---------------------HEADER---------------------*/
 
   header {
     position: fixed;
+    top:0;
     width: 100%;
     background-color: var(--primary-bg-color-black);
     backdrop-filter: blur(100px);
     -webkit-backdrop-filter: blur(100px);
-    padding: 20px 0px;
+    padding: 20px 0px; 
+    z-index: 1;
   }
   
   header::before {
