@@ -11,12 +11,11 @@
     width: 100%;
     margin: 0;
   }
-  
-  section {
-    background: linear-gradient(180deg, var(--secondary-bg-color-opacity), var(--teriary-bg-color-opacity));
-    height: 100vh;
-  }
-  
+
+
+
+  /* ---------------------HEADER---------------------*/
+
   header {
     position: fixed;
     width: 100%;
@@ -217,13 +216,19 @@
   }
   
   .container .btn::before, .container .btn::after, header::before, footer::after {
-    background: #2bd1ff;
-    box-shadow: 0 0 5px #2bd2ff, 0 0 10px #2bd2ff, 0 0 15px #2bd2ff, 0 0 30px #2bd2ff;
+    background: var(--quaternary-bg-color);
+    box-shadow: 0 0 5px var(--quaternary-bg-color), 0 0 10px var(--quaternary-bg-color), 0 0 15px var(--quaternary-bg-color), 0 0 30px var(--quaternary-bg-color);
   }
   
   /* ----------X----------FIN BUTTON----------X----------*/
   
   /* ----------X----------FIN HEADER----------X----------*/
+
+
+
+
+
+
   
   /* ---------------------FOOTER---------------------*/
   
@@ -322,8 +327,8 @@
       height: 2px;
     }
     .ul-nav::before, .ul-nav::after {
-      background: #2bd1ff;
-      box-shadow: 0 0 5px #2bd2ff, 0 0 10px #2bd2ff, 0 0 15px #2bd2ff, 0 0 30px #2bd2ff;
+      background: var(--quaternary-bg-color);
+      box-shadow: 0 0 5px var(--quaternary-bg-color), 0 0 10px var(--quaternary-bg-color), 0 0 15px var(--quaternary-bg-color), 0 0 30px var(--quaternary-bg-color);
     }
     .ul-nav.active {
       left: 0;
