@@ -1,235 +1,335 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
 
+body {
+  background-image: url("../Asset/circuits3b.png");
+  background-attachment: scroll;
+  background-repeat: repeat;
+  width: 100%;
+  margin: 0;
+}
 
-  body{
-    background-image: url("../Asset/circuits3b.png");
-	  background-attachment: scroll;
-	  background-repeat: repeat;
-	  width: 100%;
-	  margin: 0;
-  }
-
-  section{
-    background-color: rgba(1, 23, 49, 0.747);
-    height: 100vh;
-  }
-  
+section {
+  background: linear-gradient(180deg, var(--secondary-bg-color-opacity), var(--teriary-bg-color-opacity));
+  height: 100vh;
+}
 
 header {
-    background-color: var(--primary-bg-color-black);
-    border-bottom: 1px solid #2bd1ff;
-    backdrop-filter: blur(100px);
-    -webkit-backdrop-filter: blur(100px);
-    box-shadow: 0px 0px 20px 4px #2bd1ff;
-  }
+  position: fixed;
+  width: 100%;
+  background-color: var(--primary-bg-color-black);
+  backdrop-filter: blur(100px);
+  -webkit-backdrop-filter: blur(100px);
+  padding: 20px 0px;
+}
 
-  #navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+header::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -1px;
+  /*Positionne verticalement la bordure plus la valeur négative est élevée, plus la bordure s'éloigne du bouton.*/
+  width: 100%;
+  height: 2px;
+}
 
-  .a-logo {
-    font-size: max(1.1vw, 6px);
-    color: var(--primary-bg-color-white);
-    font-weight: 600;
-    margin-left: 3vw;
-    text-decoration: none;
-  }
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-  .img-logo {
-    max-width: max(7vw, 90px);
-    height: auto;
-    padding: 5px 0vw;
-  }
+.a-logo {
+  font-size: max(1.1vw, 6px);
+  color: var(--primary-bg-color-white);
+  font-weight: 600;
+  margin-left: 3vw;
+  text-decoration: none;
+}
 
-  #navbar-nav {
-    margin-right: 2vw;
-  }
+.img-logo {
+  max-width: max(7vw, 90px);
+  height: auto;
+  padding: 5px 0vw;
+}
 
-  .ul-nav {
-    align-items: center;
-    display: flex;
-    align-items: center;
-  }
+#navbar-nav {
+  margin-right: 2vw;
+}
 
-  #navbar-nav ul li a {
-    -moz-user-select: none;
-    /* Firefox */
-    -webkit-user-select: none;
-    /* Chrome, Safari, Opéra depuis la version 15 */
-    -ms-user-select: none;
-    /* Internet explorer depuis la version 10 et Edge */
-    user-select: none;
-    /* Propriété standard */
-  }
+.ul-nav {
+  align-items: center;
+  display: flex;
+  align-items: center;
+}
 
-  .home-nav, .product-nav, .recrut-nav, .shopping-nav {
-    color: var(--primary-bg-color-white);
-    font-size: max(0.82vw, 13px);
-    font-weight: bold;
-    text-align: center;
-  }
+#navbar-nav ul li a {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
 
-  .panier{
-    margin: 5px 5px 0px 20px;
-  }
+.home-nav, .product-nav, .recrut-nav, .shopping-nav {
+  color: var(--primary-bg-color-white);
+  font-size: max(0.82vw, 13px);
+  font-weight: bold;
+  text-align: center;
+}
 
-  .hamburger {
-    display: none;
-  }
-  
-  .bar {
-    display: block;
-    width: 25px;
-    height: 3px;
-    margin: 5px auto;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-    background-color: var(--primary-bg-color-white);
-  }
+.panier {
+  margin: 5px 5px 0px 20px;
+  width: 35px;
+  height: 35px;
+}
 
+.hamburger {
+  display: none;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: var(--primary-bg-color-white);
+}
 
 /* ---------------------BUTTON---------------------*/
-  .container{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
 
-  .container .btn{
-    position: relative;
-    width: 130px;
-    height: 30px;
-    margin-left: 20px;
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
-.container .btn a{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: rgba(255, 255, 255, 0.1);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    border-bottom: 1px solid rgba(255, 255, 255, 0);
-    color: #fff;
-    z-index: 1;
-    font-weight: 400;
-    letter-spacing: 1px;
-    text-decoration: none;
-    overflow: hidden;
-    transition: 0.5s; /*Vitesse de l'agrandissement du texte*/
-    backdrop-filter: blur(15px);
+.container .btn {
+  position: relative;
+  width: 130px;
+  height: 40px;
+  margin-left: 20px;
 }
 
-.container .btn:hover a{
-    letter-spacing: 4px;
+.container .btn a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0);
+  border-radius: 20px;
+  color: #fff;
+  z-index: 1;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-decoration: none;
+  overflow: hidden;
+  transition: 0.5s;
+  /*Vitesse de l'agrandissement du texte*/
+  backdrop-filter: blur(15px);
 }
 
-.container .btn a::before{
-    content:  '';
-    position: absolute;
-    top: 0; /*Positionne le dégradé*/
-    left: 0; /*Positionne le dégradé*/
-    width: 30%; /*Largeur dégradé*/
-    height: 100%; /*Hauteur dégradé*/
-    background: linear-gradient(to left, rgba(255, 255, 255, 0.08), transparent);
-    transform: skewX(45deg) translateX(0%); /*Inclinaison du dégradé="skewX" longueur du dégradé à partir du centre (width:50%) ="translateX" */
-    transition: 0.1s; /*Effet de transition du dégardé au passage du curseur*/
+.container .btn:hover a {
+  letter-spacing: 4px;
 }
 
-.container .btn:hover a::before{
-    transform: skewX(45deg) translateX(260%);  /*Le dégradé se déplace vers la droite quand le curseur passe dessus*/
+.container .btn a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  /*Positionne le dégradé*/
+  left: 0;
+  /*Positionne le dégradé*/
+  width: 30%;
+  /*Largeur dégradé*/
+  height: 100%;
+  /*Hauteur dégradé*/
+  background: linear-gradient(to left, rgba(255, 255, 255, 0.08), transparent);
+  transform: skewX(45deg) translateX(0%);
+  /*Inclinaison du dégradé="skewX" longueur du dégradé à partir du centre (width:50%) ="translateX" */
+  transition: 0.1s;
+}
+
+.container .btn:hover a::before {
+  transform: skewX(45deg) translateX(260%);
+  /*Le dégradé se déplace vers la droite quand le curseur passe dessus*/
 }
 
 /*BORDURE BAS*/
 .container .btn::before{
-    content:  ''; /*Si supprimé fait diparaître la bordure*/
-    position: absolute;
-    left: 50%; /*Position de la bordure par rapport au bouton (ici 50%=centré)*/
-    transform: translateX(-50%); /*Centre bien la bordure*/
-    bottom: -4px; /*Positionne verticalement la bordure plus la valeur négative est élevée, plus la bordure s'éloigne du bouton. L'effet de transition reste sur le bouton (donne un effet sympa)*/
-    width: 130px; /*Largeur de la bordure*/
-    height: 1px; /*Hauteur de la bordure*/
-    transition: 0.3s; /*Vitesse transition quand le curseur passe dessus*/
-    transition-delay: 0s; /*Délai avant que la transition revienne à son état initial*/
+  content:  ''; /*Si supprimé fait diparaître la bordure*/
+  position: absolute;
+  left: 50%; /*Position de la bordure par rapport au bouton (ici 50%=centré)*/
+  transform: translateX(-50%); /*Centre bien la bordure (pas bien compris)*/
+  bottom: -11px; /*Positionne verticalement la bordure plus la valeur négative est élevée, plus la bordure s'éloigne du bouton. L'effet de transition reste sur le bouton (donne un effet sympa)*/
+  width: 3px; /*Largeur de la bordure*/
+  height: 3px; /*Hauteur de la bordure*/
+  border-radius:  50%; /*border-radius bordure*/
+  transition: 0.5s; /*Vitesse transition quand le curseur passe dessus*/
+  transition-delay: 0s; /*Délai avant que la transition revienne à son état initial*/
+  border-radius: 20px;
 }
 
 .container .btn:hover::before{
-    bottom: 0; /*la bordure du bas remonte entierement sur le bouton quand le curseur passe dessus (changer cette valeur fait dépasser l'effet de transition du bouton rendant la bordure du bouton apparente avec une ombre)*/
-    height: 65%; /*la hauteur du blur augmente ici jusqu'à 50% pendant l'effet de transition, quand le curseur passe dessus*/
-    width: 100%; /*idem avec la largeur*/
-    transition-delay: 0.3s; /*Retarde l'effet avec le blur*/
+  bottom: 0; /*la bordure du bas remonte entierement sur le bouton quand le curseur passe dessus (changer cette valeur fait dépasser l'effet de transition du bouton rendant la bordure du bouton apparente avec une ombre)*/
+  height: 60%; /*la hauteur du blur augmente ici jusqu'à 50% pendant l'effet de transition, quand le curseur passe dessus*/
+  width: 100%; /*idem avec la largeur*/
+  border-radius: 10px; /*border-radius de l'effet de transition*/
+  transition-delay: 0.2s; /*Retarde l'effet avec le blur*/
+  border-radius: 20px;
 }
 
 
 /*BORDURE HAUT*/
 .container .btn::after{
-    content:  ''; /*Si supprimé fait diparaître la bordure*/
-    position: absolute;
-    left: 50%; /*Position de la bordure par rapport au bouton (ici 50%=centré)*/
-    transform: translateX(-50%);
-    top: -2px; /*Positionne verticalement la bordure plus la valeur négative est élevée, plus la bordure s'éloigne du bouton. L'effet de transition reste sur le bouton (donne un effet sympa)*/
-    width: 130px; /*Largeur de la bordure*/
-    height: 1px; /*Hauteur de la bordure*/
-    transition: 0.3s;  /*Vitesse transition quand le curseur passe dessus*/
-    transition-delay: 0s; /*Délai avant que la transition revienne à son état initial*/
+  content:  ''; /*Si supprimé fait diparaître la bordure*/
+  position: absolute;
+  left: 50%; /*Position de la bordure par rapport au bouton (ici 50%=centré)*/
+  transform: translateX(-50%);
+  top: -10px; /*Positionne verticalement la bordure plus la valeur négative est élevée, plus la bordure s'éloigne du bouton. L'effet de transition reste sur le bouton (donne un effet sympa)*/
+  width: 3px; /*Largeur de la bordure*/
+  height: 3px; /*Hauteur de la bordure*/
+  border-radius:  50%; /*border-radius bordure*/
+  transition: 0.5s;  /*Vitesse transition quand le curseur passe dessus*/
+  transition-delay: 0s; /*Délai avant que la transition revienne à son état initial*/
+  border-radius: 20px;
 }
 
 .container .btn:hover::after{
-    top: 0; /*la bordure du haut disparaît derrière le bouton quand le curseur passe dessus*/
-    height: 65%; /*la hauteur du blur augmente quand le curseur passe dessus*/
-    width: 100%; /*idem avec la largeur*/
-    transition-delay: 0.3s; /*Retarde l'effet avec le blur*/
+  top: 0; /*la bordure du haut disparaît derrière le bouton quand le curseur passe dessus*/
+  height: 60%; /*la hauteur du blur augmente quand le curseur passe dessus*/
+  width: 100%; /*idem avec la largeur*/
+  border-radius: 10px; /*border-radius de l'effet de transition*/
+  transition-delay: 0.2s; /*Retarde l'effet avec le blur*/
+  border-radius: 20px;
 }
 
-.container .btn::before, 
-.container .btn::after{
-    background: #2bd1ff;
-    box-shadow: 0 0 5px #2bd2ff,
-    0 0 10px #2bd2ff,
-    0 0 15px #2bd2ff,
-    0 0 30px #2bd2ff;
+.container .btn::before, .container .btn::after, header::before, footer::after {
+  background: #2bd1ff;
+  box-shadow: 0 0 5px #2bd2ff, 0 0 10px #2bd2ff, 0 0 15px #2bd2ff, 0 0 30px #2bd2ff;
 }
- /* ----------X----------FIN BUTTON----------X----------*/
+
+/* ----------X----------FIN BUTTON----------X----------*/
 
 /* ----------X----------FIN HEADER----------X----------*/
 
+/* ---------------------FOOTER---------------------*/
+
+footer {
+  position: relative;
+  background-color: var(--primary-bg-color-black);
+  color: var(--primary-bg-color-white);
+  list-style-type: none;
+  padding: 1vw 0vw;
+  font-size: max(1vw, 10px);
+  backdrop-filter: blur(100px);
+  -webkit-backdrop-filter: blur(100px);
+}
+
+footer::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -1px;
+  width: 100%;
+  height: 2px;
+}
 
 
-  
+.img-logo {
+  width: max(10vw, 80px);
+  margin-right: 2vw;
+}
 
+.mentions {
+  list-style-type: none;
+  padding-bottom: 15px;
+}
 
-  /* ---------------------MEDIAQUERIES---------------------*/
+.mentions li a {
+  text-decoration: none;
+  margin-left: 2vw;
+  color: var(--primary-bg-color-white);
+}
 
-@media only screen and (max-width: 768px) {
+.copy-icon {
+  list-style-type: none;
+}
+
+.copyright {
+  margin-right: 2vw;
+}
+
+.social-icon {
+  margin-left: 1vw;
+}
+
+svg {
+  width: max(1vw, 9px);
+  height: max(1vw, 9px);
+}
+
+/* ----------X----------FIN FOOTER----------X----------*/
+
+/* ---------------------MEDIAQUERIES---------------------*/
+
+@media only screen and (max-width: 700px) {
   .ul-nav {
     position: fixed;
-    left: -100%;
-    top: 53px;
+    left: -110%;
+    top: 100px;
     flex-direction: column;
     background-color: var(--primary-bg-color-black);
     width: 100%;
     text-align: center;
     transition: 0.3s;
-    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
     z-index: 10;
+    backdrop-filter: blur(100px);
+    -webkit-backdrop-filter: blur(100px);
+    padding: 0px 0px 25px 0px;
+  }
+  .ul-nav::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -1px;
+    /*Positionne verticalement la bordure plus la valeur négative est élevée, plus la bordure s'éloigne du bouton.*/
+    width: 100%;
+    height: 2px;
+  }
+  .ul-nav::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -1px;
+    /*Positionne verticalement la bordure plus la valeur négative est élevée, plus la bordure s'éloigne du bouton.*/
+    width: 100%;
+    height: 2px;
+  }
+  .ul-nav::before, .ul-nav::after {
+    background: #2bd1ff;
+    box-shadow: 0 0 5px #2bd2ff, 0 0 10px #2bd2ff, 0 0 15px #2bd2ff, 0 0 30px #2bd2ff;
   }
   .ul-nav.active {
     left: 0;
   }
   .li-nav {
-    margin: 2vw 0vw;
+    margin: 60px 20px 0px 0px;
   }
   .hamburger {
     position: relative;
