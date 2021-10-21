@@ -6,11 +6,14 @@
     --teriary-bg-color: rgb(71,108,141);
     --quaternary-bg-color: rgb(120,206,255);
     --quinternary-bg-color: rgb(91,206,255);
+    --fifth-bg-color:rgb(147,146,146);
+
     /*-------------Varible Couleur avec opacity ----------------- */
     --opacity: 0.9;
     --secondary-bg-color-opacity: rgb(1,23,49,var(--opacity));
     --teriary-bg-color-opacity: rgb(71,108,141, var(--opacity));
     --teriary-bg-color-opacity2: rgb(71,108,141, 0.5);
+
 
     /* ---------------Variable font-size--------------- */
     --title-size: 1.8em;
@@ -20,6 +23,7 @@
     --font1: roboto;
     --font2: cursive;
     --font3: arial;
+
 }
 .column{
     display: flex;

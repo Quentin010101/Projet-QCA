@@ -1,0 +1,153 @@
+body {
+  background-color: var(--fifth-bg-color);
+  font-family: var(--font2);
+}
+
+/*-----------------------------TEXT_ICON_TITLE-----------------------------*/
+p,
+li {
+  font-size: var(--text-size);
+  line-height: 3vh;
+}
+
+.icon_recrut {
+  font-size: var(--text-size);
+  padding: 0 5vh;
+}
+.title {
+  padding: 22vh 9vw 0px;
+  color: var(--primary-bg-color-white);
+}
+
+h2 {
+  font-size: var(--title-size);
+  padding-left: 3vw;
+}
+/*------------X----------------TEXT_LOGO_TITLE---------------X-------------*/
+
+/* -----------------------------ANNONCES EMPLOIS-----------------------------*/
+.text_annonce {
+  padding: 0 5vh;
+}
+
+.section_recrut {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.list_annonce {
+  margin-left: 40px;
+}
+
+.annonce1,
+.annonce2,
+.annonce3 {
+  width: 49vw;
+  display: flex;
+  /* margin: 65px 3vw; */
+  position: relative;
+  flex-direction: column;
+  box-shadow: 6px 6px 10px var(--quinternary-bg-color);
+  color: var(--primary-bg-color-white);
+  border: solid rgb(0, 0, 0) 1px;
+  background: linear-gradient(
+    0deg,
+    rgba(18, 77, 120, 1) 0%,
+    rgba(18, 77, 120, 1) 8%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
+
+button {
+  bottom: 2vh;
+  height: 4vh;
+  width: 16.5vh;
+  border: none;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-bg-color-white);
+  background-color: var(--quinternary-bg-color);
+}
+
+.button_recrut {
+  display: flex;
+  padding-right: 5vw;
+  flex-direction: row;
+  align-items: baseline;
+  align-content: flex-end;
+  justify-content: flex-end;
+}
+
+@media all and (max-width: 785px) {
+  .button_recrut {
+    display: flex;
+    justify-content: center;
+  }
+  .title {
+    display: flex;
+    padding-top: 1vh;
+    justify-content: center;
+  }
+
+  .list_annonce {
+  }
+}
+
+/*--------------X--------------ANNONCES EMPLOIS--------------X--------------*/
+
+/*-----------------------------DEPOSE CV ET ALERTE ANNONCE-----------------------------*/
+.container_cv {
+  height: 35vh;
+  width: 35vw;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.icon_alert {
+  display: flex;
+  justify-content: center;
+}
+
+.alert_recrut,
+.inscription_alert {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  /* height: 32vh;
+  width: 32vh; */
+  /* margin-top: 4vh; */
+}
+
+.alert_recrut {
+  border: rgb(255, 255, 255) solid 1px;
+  background: var(--primary-bg-color-white);
+  justify-content: space-around;
+}
+
+.alert_recrut_para {
+  padding: 0vh 2vh;
+}
+
+.bi-bell,
+.bi-person-rolodex {
+  border: var(--quinternary-bg-color) solid 1px;
+  background: var(--quinternary-bg-color);
+  border-radius: 100%;
+  height: 10vh;
+  width: 7vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 70px;
+}
+.button_recrut {
+}
+
+/*--------------X--------------DEPOSE CV ET ALERTE ANNONCE--------------X--------------*/
