@@ -1,0 +1,36 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+}
+.admin-container{
+    width: 90%;
+}
+.admin-box{
+    border: solid;
+    position: relative;
+}
+.admin-sous-container{
+    display: flex;
+    justify-content: flex-end;
+}
+.admin-box ion-icon{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+#drop-area{
+    width: 100px;
+    aspect-ratio: 1 / 1;
+    border-style: groove;
+}
+
+/* --------- drag & drop ------------*/
+.highlight{
+    background: violet;
+}
