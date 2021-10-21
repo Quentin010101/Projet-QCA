@@ -6,6 +6,7 @@
     --teriary-bg-color: rgb(71,108,141);
     --quaternary-bg-color: rgb(120,206,255);
     --quinternary-bg-color: rgb(91,206,255);
+    --fifth-bg-color:rgb(147,146,146);
     /* ---------------Variable font-size--------------- */
     --title-size: 24px;
     --sous-title-size: 20px;
@@ -14,6 +15,7 @@
     --font1: roboto;
     --font2: arial;
     --font3: cursive;
+    --font4: poppins;
 }
 .column{
     display: flex;
