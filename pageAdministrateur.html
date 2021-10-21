@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Administrateur</title>
+    <link rel="stylesheet" href="./css/general.css">
+    <link rel="stylesheet" href="./css/pageAdministrateur.css">
+</head>
+
+<body>
+
+    <!-- header -->
+
+    <div class="admin-container column">
+        <div class="admin-box admin-color column">
+            <div>
+                <p>Changer les couleurs</p>
+            </div>
+            <div>
+                <div class="admin-sous-container">
+                    <p>Couleur Primaire</p>
+                    <input type="color" name="primaryColor" id="primaryColor">
+                    <input type="submit" id="button-admin-color1">
+                </div>
+                <div class="admin-sous-container">
+                    <p>Couleur Secondaire</p>
+                    <input type="color" name="secondaryColor" id="secondaryColor">
+                    <input type="submit" id="button-admin-color2">
+                </div>
+                <div class="admin-sous-container">
+                    <p>Couleur Tertiaire</p>
+                    <input type="color" name="tertiaryColor" id="tertiaryColor">
+                    <input type="submit" id="button-admin-color3">
+                </div>
+            </div>
+            <ion-icon name="chevron-down-outline"></ion-icon>
+        </div>
+        <div class="admin-box admin-image column">
+            <div>
+                <p>Changer les images</p>
+            </div>
+            <div>
+                <div class="admin-sous-container admin-sous-container-img1">
+                    <p>1ere image Page Vente</p>
+                    <form action="">
+                        <input type="file">
+                        <div class="drop-area"></div>
+                    </form>
+                </div>
+                <div class="admin-sous-container admin-sous-container-img2">
+                    <p>2ème image Page Vente</p>
+                    <form action="">
+                        <input type="file">
+                        <div class="drop-area"></div>
+                    </form>
+                </div>
+                <div class="admin-sous-container admin-sous-container-img3">
+                    <p>3ème image Page Vente</p>
+                    <form action="">
+                        <input type="file">
+                        <div class="drop-area"></div>
+                    </form>
+                </div>
+            </div>
+            <ion-icon name="chevron-down-outline"></ion-icon>
+        </div>
+        <div class="admin-box admin-text column">
+            <p>Changer le text</p>
+            <ion-icon name="chevron-down-outline"></ion-icon>
+        </div>
+    </div>
+
+    <!-- footer -->
+
+    <script src="./js/pageAdministrateur.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

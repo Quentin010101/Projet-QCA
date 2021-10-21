@@ -13,9 +13,6 @@ section{
     width: 100%;
     height: 100vh;
 }
-section h1{
-
-}
 section h2, section p, section span, section button{
     color: var(--primary-bg-color-white);
 }
@@ -154,8 +151,6 @@ section h2, section p, section span, section button{
     75%{transform: scale(0.95) rotateY(10deg);}
     100%{transform: scale(1) rotateY(0deg);}
 }
-
-
 
 /* ------------------------ Media Query -------------------- */
 @media (max-width: 1000px){
