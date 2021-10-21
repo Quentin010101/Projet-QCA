@@ -3,9 +3,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-html{
-    scroll-behavior: smooth;
-}
 body{
     background-image: url("/Asset/circuits3b.png");
 }
@@ -82,6 +79,7 @@ section h2, section p, section span, section button{
 }
 /* ------------------------ 1ere section-------------------- */
 .section1{
+    margin-top: 50px;
     background: linear-gradient(180deg, var(--secondary-bg-color-opacity), var(--teriary-bg-color-opacity));    
     align-items: center;
     justify-content: space-evenly;
@@ -113,9 +111,11 @@ section h2, section p, section span, section button{
 .section3 .container-image{
     position: relative;
     height: 100%;
+    z-index: 0;
 }
 .section3 .container-image img{
     position: absolute;
+    z-index: 0;
     top: 35%;
 }
 .section3 .container-image .sprite1{

@@ -6,30 +6,59 @@
 
 body{
     display: flex;
-    justify-content: center;
-}
-.admin-container{
-    width: 90%;
+    flex-direction: column;
 }
 .admin-box{
     border: solid;
     position: relative;
+    margin: 10px 0;
+    background: var(--fifth-bg-color);
+    box-shadow: 0.2em 0.2em 0.5em var(--primary-bg-color-black);
 }
 .admin-sous-container{
     display: flex;
     justify-content: flex-end;
+    margin: 4px 50px 4px 0;
+}
+.admin-sous-container p, .admin-sous-container input{
+    margin: 0 5px;
+}
+.admin-color > div:nth-child(2){
+    max-height: 0px;
+    transition: max-height 0.6s;
+    overflow: hidden;
 }
 .admin-box ion-icon{
-    position: absolute;
-    bottom: 0;
-    right: 0;
+    transform: rotateZ(0deg);
+    transition: transform 0.6s;
+    cursor: pointer;
+}
+.admin-box h3{
+    font-family: var(--font3);
+}
+.admin-color > div:nth-child(3){
+    display: flex;
+    justify-content: flex-end;
 }
 #drop-area{
     width: 100px;
     aspect-ratio: 1 / 1;
     border-style: groove;
 }
+main{
+    width: 90%;
+    margin-top: 150px;
+    align-self: center;
 
+}
+.menu-toggle{
+    max-height: 200px !important;
+    transition: max-height 0.6s;
+}
+.icon-rotate{
+    transform: rotateZ(180deg) !important;
+    transition: transform 0.6s;
+}
 /* --------- drag & drop ------------*/
 .highlight{
     background: violet;

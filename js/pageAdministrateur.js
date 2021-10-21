@@ -18,4 +18,12 @@ button3.addEventListener('click', function(){
     root.style.cssText += "--teriary-bg-color: " + colorT.value
 })
 
-// ------------Drag and Drop image ----------------------
+// ------------Dropdown Menue ----------------------
+
+const menu1 = document.querySelector('.admin-color > div:nth-child(2)')
+const icon1 = document.querySelector('.admin-color ion-icon')
+
+icon1.addEventListener('click', function(){
+    menu1.classList.toggle('menu-toggle')
+    icon1.classList.toggle('icon-rotate')
+})
