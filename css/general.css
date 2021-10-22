@@ -10,9 +10,9 @@
 
     /*-------------Varible Couleur avec opacity ----------------- */
     --opacity: 0.9;
-    --secondary-bg-color-opacity: rgb(1,23,49,var(--opacity));
-    --teriary-bg-color-opacity: rgb(71,108,141, var(--opacity));
-    --teriary-bg-color-opacity2: rgb(71,108,141, 0.5);
+    --secondary-bg-color-opacity: rgba(1,23,49,var(--opacity));
+    --teriary-bg-color-opacity: rgba(71,108,141, var(--opacity));
+    --teriary-bg-color-opacity2: rgba(71,108,141, 0.5);
 
 
     /* ---------------Variable font-size--------------- */
