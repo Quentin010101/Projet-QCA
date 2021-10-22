@@ -60,6 +60,6 @@ main{
     transition: transform 0.6s;
 }
 /* --------- drag & drop ------------*/
-.highlight{
-    background: violet;
+#reloadColor{
+    cursor: pointer;
 }
