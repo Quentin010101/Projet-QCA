@@ -1,26 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+}
 body {
   background-color: var(--fifth-bg-color);
-  font-family: var(--font2);
+  font-family: var(--font1);
+}
+
+main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 /*-----------------------------TEXT_ICON_TITLE-----------------------------*/
 p,
 li {
   font-size: var(--text-size);
-  line-height: 3vh;
+  line-height: 25px;
 }
 
 .icon_recrut {
   font-size: var(--text-size);
-  padding: 0 5vh;
+  padding: 0 5vw;
 }
 .title {
-  padding: 22vh 9vw 0px;
   color: var(--primary-bg-color-white);
 }
 
 h2 {
-  font-size: var(--title-size);
   padding-left: 3vw;
 }
 /*------------X----------------TEXT_LOGO_TITLE---------------X-------------*/
@@ -31,11 +40,12 @@ h2 {
 }
 
 .section_recrut {
-  height: 100vh;
+  margin-top: 100px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
+  border: solid 1px rgb(0, 255, 85);
 }
 
 .list_annonce {
@@ -45,11 +55,8 @@ h2 {
 .annonce1,
 .annonce2,
 .annonce3 {
-  width: 49vw;
-  display: flex;
-  /* margin: 65px 3vw; */
-  position: relative;
-  flex-direction: column;
+  margin-bottom: 4vw;
+  width: 55vw;
   box-shadow: 6px 6px 10px var(--quinternary-bg-color);
   color: var(--primary-bg-color-white);
   border: solid rgb(0, 0, 0) 1px;
@@ -57,14 +64,13 @@ h2 {
     0deg,
     rgba(18, 77, 120, 1) 0%,
     rgba(18, 77, 120, 1) 8%,
-    rgba(0, 0, 0, 1) 100%
-  );
+    rgba(0, 0, 0, 1) 100%);
 }
 
 button {
-  bottom: 2vh;
-  height: 4vh;
-  width: 16.5vh;
+  margin-bottom: 1vw;
+  height: 35px;
+  width: 150px;
   border: none;
   display: flex;
   position: absolute;
@@ -83,31 +89,24 @@ button {
   justify-content: flex-end;
 }
 
-@media all and (max-width: 785px) {
-  .button_recrut {
-    display: flex;
-    justify-content: center;
-  }
-  .title {
-    display: flex;
-    padding-top: 1vh;
-    justify-content: center;
-  }
-
-  .list_annonce {
-  }
+.offre {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+  border: slategray solid 1px;
 }
 
 /*--------------X--------------ANNONCES EMPLOIS--------------X--------------*/
 
 /*-----------------------------DEPOSE CV ET ALERTE ANNONCE-----------------------------*/
 .container_cv {
-  height: 35vh;
   width: 35vw;
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
+  border: 1px solid blueviolet;
 }
 
 .icon_alert {
@@ -120,15 +119,16 @@ button {
   display: flex;
   align-items: center;
   flex-direction: column;
-  /* height: 32vh;
-  width: 32vh; */
-  /* margin-top: 4vh; */
+  width: 16vw;
+  margin-bottom: 70px;
+  
 }
 
 .alert_recrut {
   border: rgb(255, 255, 255) solid 1px;
   background: var(--primary-bg-color-white);
   justify-content: space-around;
+  box-shadow: 6px 6px 10px var(--quinternary-bg-color);
 }
 
 .alert_recrut_para {
