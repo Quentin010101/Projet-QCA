@@ -1,55 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+}
 body {
-  background-color: var(--fifth-bg-color);
+  background-image: url("/Asset/circuits3b.png");
   font-family: var(--font2);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5vw;
+  background: linear-gradient(180deg, var(--secondary-bg-color-opacity), var(--teriary-bg-color-opacity), var(--secondary-bg-color-opacity));
 }
 
 /*-----------------------------TEXT_ICON_TITLE-----------------------------*/
 p,
 li {
   font-size: var(--text-size);
-  line-height: 3vh;
+  line-height: 2vh;
 }
 
 .icon_recrut {
   font-size: var(--text-size);
-  padding: 0 5vh;
+  margin: 0 5vw;
 }
 .title {
-  padding: 22vh 9vw 0px;
   color: var(--primary-bg-color-white);
 }
 
-h2 {
-  font-size: var(--title-size);
-  padding-left: 3vw;
-}
 /*------------X----------------TEXT_LOGO_TITLE---------------X-------------*/
 
 /* -----------------------------ANNONCES EMPLOIS-----------------------------*/
-.text_annonce {
-  padding: 0 5vh;
-}
-
 .section_recrut {
-  height: 100vh;
+  margin: 2vw;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
+  
 }
 
 .list_annonce {
-  margin-left: 40px;
+  margin: 0.6vw 6.6vw;
+}
+
+.icon_recrut,
+.text_annonce,
+h2,
+h1 {
+  margin: 1vw 5vw;
+}
+
+.bi-geo-alt
+{
+  margin: 0 2vw;
 }
 
 .annonce1,
 .annonce2,
 .annonce3 {
-  width: 49vw;
-  display: flex;
-  /* margin: 65px 3vw; */
-  position: relative;
-  flex-direction: column;
+  margin-bottom: 2vw;
+  width: 55vw;
   box-shadow: 6px 6px 10px var(--quinternary-bg-color);
   color: var(--primary-bg-color-white);
   border: solid rgb(0, 0, 0) 1px;
@@ -62,57 +75,50 @@ h2 {
 }
 
 button {
-  bottom: 2vh;
-  height: 4vh;
-  width: 16.5vh;
+  margin: 1vw 1vw;
+  height: 35px;
+  width: 150px;
   border: none;
   display: flex;
-  position: absolute;
   align-items: center;
   justify-content: center;
-  color: var(--primary-bg-color-white);
+  
   background-color: var(--quinternary-bg-color);
 }
 
 .button_recrut {
   display: flex;
-  padding-right: 5vw;
   flex-direction: row;
-  align-items: baseline;
-  align-content: flex-end;
+  margin: 0 3vw 1vw;
   justify-content: flex-end;
 }
 
-@media all and (max-width: 785px) {
-  .button_recrut {
-    display: flex;
-    justify-content: center;
-  }
-  .title {
-    display: flex;
-    padding-top: 1vh;
-    justify-content: center;
-  }
-
-  .list_annonce {
-  }
+.offre {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
 }
+.title{
+  margin: 1vw 2vw;
+}
+
 
 /*--------------X--------------ANNONCES EMPLOIS--------------X--------------*/
 
 /*-----------------------------DEPOSE CV ET ALERTE ANNONCE-----------------------------*/
 .container_cv {
-  height: 35vh;
   width: 35vw;
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 
 .icon_alert {
   display: flex;
   justify-content: center;
+  
 }
 
 .alert_recrut,
@@ -120,34 +126,38 @@ button {
   display: flex;
   align-items: center;
   flex-direction: column;
-  /* height: 32vh;
-  width: 32vh; */
-  /* margin-top: 4vh; */
+  width: 17vw;
+  margin-bottom: 1vw;
 }
 
 .alert_recrut {
   border: rgb(255, 255, 255) solid 1px;
   background: var(--primary-bg-color-white);
-  justify-content: space-around;
+  box-shadow: 6px 6px 10px var(--quinternary-bg-color);
+  margin: 2vw 0 1vw;
 }
 
 .alert_recrut_para {
-  padding: 0vh 2vh;
+  padding: 0 2vw;
+  margin: 2vw 0 1vw;
 }
 
-.bi-bell,
-.bi-person-rolodex {
+img {
+  height: 5vw;
+  width: 5vw;
+}
+
+.icon_alert {
   border: var(--quinternary-bg-color) solid 1px;
   background: var(--quinternary-bg-color);
   border-radius: 100%;
-  height: 10vh;
   width: 7vw;
+  height: 7vw;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 70px;
-}
-.button_recrut {
+  margin: 1vw 0;
 }
 
 /*--------------X--------------DEPOSE CV ET ALERTE ANNONCE--------------X--------------*/
