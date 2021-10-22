@@ -8,7 +8,7 @@ header {
   -webkit-backdrop-filter: blur(100px);
   padding: 20px 0px;
   top: 0;
-  z_index: 1;
+  z-index: 1;
 }
 
 header::before {
