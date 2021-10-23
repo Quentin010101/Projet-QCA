@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="./css/accueil.css" />
     <link rel="stylesheet" href="./css/general.css" />
+    <link rel="stylesheet" href="./css/CSS-header-footer-blur.css" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QCA accueil</title>
@@ -47,101 +48,190 @@
         </nav>
     </header>
     <main>
+        <section id="section-1">
 
-        <div class="main-content">
-            <h1>Nos cartes graphiques</h1>
-            <div class="slideshow-container">
+            <div class="main-content">
+                <div class="slideshow-container">
+                    
+                    <div class="slideshow">
 
-                <div class="slideshow">
+                        <div class="slide s1 fade">
+                            <div class=" overlay"></div>
+                            <h2>Goliath 4090 6G</h2>
+                        </div>
+                        <div class="slide s2 fade">
+                            <div class=" overlay"></div>
+                            <h2>Goliath 4090 6G</h2>
+                        </div>
+                        <div class="slide s3 fade">
+                            <div class=" overlay"></div>
+                            <h2>Goliath 4090 8G</h2>
+                        </div>
+                        <div class="slide s4 fade">
+                            <div class=" overlay"></div>
+                            <h2>Goliath 4090 8G</h2>
+                        </div>
+                        <div class="slide s5 fade">
+                            <div class=" overlay"></div>
+                            <h2>Goliath 4090 12G</h2>
+                        </div>
+                        <div class="slide s6 fade">
+                            <div class=" overlay"></div>
+                            <h2>Goliath 4090 12G</h2>
+                        </div>
 
-                    <div class="slide s1 fade">
-                        <div class=" overlay"></div>
-                        <h2>QCA</h2>
                     </div>
-                    <div class="slide s2 fade">
-                        <div class=" overlay"></div>
-                        <h2>QCA</h2>
-                    </div>
-                    <div class="slide s3 fade">
-                        <div class=" overlay"></div>
-                        <h2>QCA</h2>
-                    </div>
-                    <div class="slide s4 fade">
-                        <div class=" overlay"></div>
-                        <h2>QCA</h2>
-                    </div>
-                    <div class="slide s5 fade">
-                        <div class=" overlay"></div>
-                        <h2>QCA</h2>
-                    </div>
-                    <div class="slide s6 fade">
-                        <div class=" overlay"></div>
-                        <h2>QCA</h2>
-                    </div>
-
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
                 </div>
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
             </div>
-        </div>
 
-        <div style="text-align: center;">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-            <span class="dot" onclick="currentSlide(4)"></span>
-            <span class="dot" onclick="currentSlide(5)"></span>
-            <span class="dot" onclick="currentSlide(6)"></span>
-        </div>
+            <div class="bloc-dot">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+                <span class="dot" onclick="currentSlide(6)"></span>
+            </div>
+        </section>
+
+        <section id="section-2">
+
+            
+            <div class="bloc-video row center">
+                <h3>Une conception tournée vers la performance</h3>
+                <video class="video" width="400" height="222" autoplay="true" loop muted>
+                    <source class="video" src="Asset/956762-esg-animation-websize-h264-bg.webm" type="video/webm" />
+                </video>
+            </div>
 
 
+            <div class="bloc-section1 row">
+
+
+                <div class="sous-bloc1">
+                    <h4>Architecture QCA Ampere à cœurs CUDA</h4>
+                    <p>
+                        Doublez la vitesse de traitement des opérations FP32 de virgule flottante en simple précision
+                        et bénéficiez d’un rendement énergétique accru pour accélérer tous vos workflows de simulation
+                        et de rendu graphique,
+                        dans des champs d’application tels que la conception assistée par ordinateur (CAO) et
+                        l’ingénierie assistée par ordinateur (IAO) sur votre station de travail de bureau.
+                    </p>
+                    <h4>Cœurs RT de 2e génération</h4>
+                    <p>
+                        Avec un rendement jusqu’à 2 fois plus élevé par rapport aux produits de génération précédente et
+                        la capacité d’exécuter des opérations de ray tracing et de shading ou de réduction du bruit en
+                        simultané,
+                        les cœurs RT de seconde génération vous offrent des gains de performance considérables avec vos
+                        workflows de rendu photoréaliste pour la production cinématographique,
+                        d’évaluation collaborative pour la conception architecturale ou de prototypage virtuel pour la
+                        conception de produits.
+                        Cette technologie accélère également le rendu du motion blurt en ray tracing pour des résultats
+                        plus rapides et une précision visuelle encore plus élevée.
+                    </p>
+                    <h4>Cœurs Tensor de troisième génération</h4>
+                    <p>
+                        Les cœurs Tensor de 3e génération innovent en mettant en œuvre le nouveau niveau de précision
+                        TF32 (Tensor Float 32),
+                        offrant une accélération jusqu’à 5 fois élevée pour l’entraînement des modèles basés sur l’IA et
+                        la science des données - sans nécessiter le moindre changement de code.
+                        La prise en charge matérielle de la technologie de la dispersion structurelle permet quant à
+                        elle de doubler le rendement des opérations d’inférence.
+                        Les cœurs Tensor fusionnent par ailleurs l’IA et le rendu graphique pour vous proposer des
+                        capacités avancées telles que le super-échantillonnage via Deep Learning (DLSS),
+                        la réduction du bruit basée sur l’IA et l’édition optimisée par GPU dans certaines applications.
+                    </p>
+                    <h4>Technologie QCA NVLink® de 3e génération</h4>
+                    <p>
+                        Augmentez la bande passante d’interconnexion GPU-vers-GPU de manière significative
+                        pour accélérer les workflows de calcul et de rendu graphique afin de traiter des volumes de
+                        données plus importants
+                    </p>
+                </div>
+
+                <div class="sous-bloc2">
+                    <h4>Ray Tracing</h4>
+                    <p>
+                        La technologie PTX offre des capacités avancées de rendu cinématique en temps réel grâce à des API de ray tracing optimisées comme QCA OptiX™, Microsoft DXR et Vulkan. 
+                        Le rendu d’environnements et d’objets photoréalistes en temps réel, combiné à des ombres, des éclairages et des reflets d’une précision jusqu’alors inégalée, 
+                        permet aujourd’hui aux infographistes et aux concepteurs de créer des contenus exceptionnels à une vitesse incomparable.
+                    </p>
+                    <h4>Rastérisation</h4>
+                    <p>
+                        La technologie PTX s'appuie sur les dernières avancées en matière de shading programmable, telles que le shading à fréquence variable, le shading TSS et le rendu multi-résolutions. 
+                        Ces innovations essentielles améliorent les expériences de réalité virtuelle et offrent davantage de fluidité avec les scènes et les modèles complexes.
+                    </p>
+                    <h4>Intelligence artificielle</h4>
+                    <p>
+                        La technologie QCA PTX fait bénéficier l’informatique visuelle de toute la puissance de l’IA, 
+                        ce qui permet aux développeurs de créer des applications optimisées par l’IA favorisant une accélération sans précédent des workflows pour les utilisateurs. 
+                        Cela permet d’accélérer la créativité des infographistes et des concepteurs de manière significative, 
+                        en leur octroyant davantage de temps et de ressources grâce à des fonctionnalités innovantes de manipulation intelligente d’images, 
+                        d’automatisation des tâches et d’optimisation des processus de calcul intensif.
+                    </p>
+                    <h4>Simulation</h4>
+                    <p>
+                        Pour créer des visuels véritablement réalistes, l’apparence des modèles d’infographie ne fait pas tout : leur comportement est lui aussi primordial. 
+                        Grâce à la puissance massive des cœurs CUDA® et à des API performantes comme QCA PhysX®, Flow, FleX et CUDA, 
+                        la technologie PTX permet de modéliser avec précision le comportement d’objets du réel dans des champs d’application aussi variés que les jeux vidéo, les environnements virtuels et les effets spéciaux.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <footer class="row center">
+
+            <a href="accueil.html" class="a-logoFoot"><img class="img-logo" src="Asset/logo3Recad.png" alt="logo" /></a>
+            <div class="column center">
+                <ul class="mentions row center">
+                    <li><a href="#">Politique de confidentialité</a></li>
+                    <li><a href="#">Mentions légales</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+
+
+                <ul class="copy-icon row">
+                    <li class="copyright">©2021 Quentin Cyril Adrien, Inc</li>
+                    <li class="social-icon">
+                        <a>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-facebook" viewBox="0 0 16 16">
+                                <path
+                                    d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="social-icon">
+                        <a>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-twitter" viewBox="0 0 16 16">
+                                <path
+                                    d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="social-icon">
+                        <a>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-linkedin" viewBox="0 0 16 16">
+                                <path
+                                    d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </footer>
     </main>
-    <footer class="row center">
 
-        <a href="accueil.html" class="a-logoFoot"><img class="img-logo" src="Asset/logo3Recad.png" alt="logo" /></a>
-        <div class="column center">
-            <ul class="mentions row center">
-                <li><a href="#">Politique de confidentialité</a></li>
-                <li><a href="#">Mentions légales</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-
-
-            <ul class="copy-icon row">
-                <li class="copyright">©2021 Quentin Cyril Adrien, Inc</li>
-                <li class="social-icon">
-                    <a>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-facebook" viewBox="0 0 16 16">
-                            <path
-                                d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
-                        </svg>
-                    </a>
-                </li>
-                <li class="social-icon">
-                    <a>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-twitter" viewBox="0 0 16 16">
-                            <path
-                                d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
-                        </svg>
-                    </a>
-                </li>
-                <li class="social-icon">
-                    <a>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-linkedin" viewBox="0 0 16 16">
-                            <path
-                                d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
-                        </svg>
-                    </a>
-                </li>
-            </ul>
-        </div>
-
-    </footer>
-
-
+    
     <script src="./js/accueil.js"></script>
 </body>
 
