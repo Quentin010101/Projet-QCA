@@ -6,7 +6,7 @@
 
 body {
   background-image: url("../Asset/circuits3b.png");
-  background-attachment: scroll;
+  background-attachment: fixed;
   background-repeat: repeat;
   width: 100%;
   margin: 0;
@@ -14,28 +14,19 @@ body {
 
 main {
   background: linear-gradient(180deg, var(--secondary-bg-color-opacity), var(--teriary-bg-color-opacity), var(--secondary-bg-color-opacity));
-  height: 100vh;
+  background-attachment: scroll;
 }
-
-
 
 /* ---------------------CAROUSEL---------------------*/
 
 .main-content {
-  padding: 0;
-}
-
-h1 {
-  font-family: var(--font1);
-  font-size: clamp(25px, 5vw, 40px);
-  font-weight: 200;
+  padding-top: 70px;
 }
 
 .slideshow-container {
-  margin-top: 4vw;
+  margin-top: 2vw;
   overflow: hidden;
-  width: 100vw;
-  min-height: 80vmin;
+  min-height: 84vmin;
   cursor: grab;
   /*curseur main*/
   position: relative;
@@ -48,22 +39,27 @@ h1 {
 
 .slideshow {
   position: absolute;
-  width: 100vw;
   height: 100%;
   display: flex;
   pointer-events: none;
   /*pour ne pas toucher au slideshow*/
+  background-color: black;
 }
 
 .slide {
   position: relative;
-  flex-shrink: 1;
+  flex-shrink: 0;
   /*empêche qu'ils rétrécisent*/
-  min-height: 100%;
-  width: 100vw;
+  width: 99vw;
   color: #fff;
-  background-size: cover;
+  background-size: 60% auto;
+  background-repeat: no-repeat;
   background-position: center;
+  position: relative;
+}
+
+.s1{
+  background-size: 100% auto;
 }
 
 .overlay {
@@ -77,35 +73,21 @@ h1 {
   background: rgba(0, 0, 0, 0.15);
 }
 
-.slide h2, .slide a {
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.39);
-}
-
 .slide h2 {
   position: absolute;
   top: clamp(10px, 2vw, 20px);
   left: clamp(10px, 2vw, 20px);
-  font-size: clamp(20px, 3vw, 40px);
+  font-size: clamp(20px, 3vw, 30px);
   font-weight: 300;
-}
-
-.slide a {
-  position: absolute;
-  bottom: clamp(10px, 2vw, 20px);
-  right: clamp(10px, 2vw, 20px);
-  font-size: clamp(16px, 3vw, 20px);
-  font-weight: 300;
-  color: #fff;
-  pointer-events: auto;
-  /*pour pouvoir cliquer sur le lien*/
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.39);
 }
 
 .s1 {
-  background-image: url("https://images.unsplash.com/photo-1577495508326-19a1b3cf65b7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80");
+  background-image: url("https://geeksus.ru/wp-content/uploads/2018/10/NVIDIA-Titan-V-18-1000x563.jpg");
 }
 
 .s2 {
-  background-image: url("https://images.unsplash.com/photo-1609766857326-18a204c2cf31?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80");
+  background-image: url("https://tecnoblog.net/wp-content/uploads/2017/12/nvidia-titan-v.jpg");
 }
 
 .s3 {
@@ -113,15 +95,15 @@ h1 {
 }
 
 .s4 {
-  background-image: url("https://images.unsplash.com/photo-1566908829550-e6551b00979b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1049&q=80");
+  background-image: url("https://i1.wp.com/techlomedia.in/wp-content/uploads/2018/12/nvidia-titan-rtx.jpg");
 }
 
 .s5 {
-  background-image: url("https://images.unsplash.com/photo-1580587771525-78b9dba3b914?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80");
+  background-image: url("https://res.cloudinary.com/dvv9fvblr/image/upload/v1600300333/jdozdmhcz6rnerfeb2sa.png");
 }
 
 .s6 {
-  background-image: url("https://images.unsplash.com/photo-1577495508326-19a1b3cf65b7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80");
+  background-image: url("https://www.nvidia.com/content/dam/en-zz/Solutions/geforce/ampere/30-series/geforce-ampere-architecture-background-image-spec2-bb580_440-d@2x.jpg");
 }
 
 /* ---------------------BUTTON---------------------*/
@@ -131,9 +113,9 @@ h1 {
   position: absolute;
   top: 50%;
   width: auto;
-  padding: 1vw;
+  padding: 0.8vw;
   margin-top: -22px;
-  color: var(--primary-bg-color-black);
+  color: var(--primary-bg-color-white);
   background-color: rgba(255, 255, 255, 0.2);
   font-weight: bold;
   font-size: max(2vw, 20px);
@@ -149,30 +131,53 @@ h1 {
 
 .prev:hover, .next:hover {
   background-color: var(--primary-bg-color-black);
-  color: var(--primary-bg-color-white);
+  color: var(--quaternary-bg-color);
+  box-shadow: 0 0 5px 2px var(--quaternary-bg-color);
 }
 
 /* The dots/bullets/indicators */
 
+.bloc-dot {
+  position: relative;
+  background-color: var(--primary-bg-color-black);
+  text-align: center;
+  backdrop-filter: blur(100px);
+  -webkit-backdrop-filter: blur(100px);
+}
+
 .dot {
   cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 10px 2px;
-  background-color: #bbb;
+  height: max(0.6vw, 10px);
+  width: max(0.6vw, 10px);
+  margin: 15px 3px;
+  background-color: rgb(182, 228, 255);
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
 }
-.active, .dot:hover {
-  background-color: #717171;
+
+.bloc-dot::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -1px;
+  /*Positionne verticalement la bordure plus la valeur négative est élevée, plus la bordure s'éloigne du bouton.*/
+  width: 100%;
+  height: 2px;
 }
 
-.active, .dot:hover {
-  background-color: #492929;
+.bloc-dot::after{
+  background: var(--quaternary-bg-color);
+  box-shadow: 0 0 5px var(--quaternary-bg-color), 0 0 10px var(--quaternary-bg-color), 0 0 15px var(--quaternary-bg-color), 0 0 30px var(--quaternary-bg-color);
+}
+
+.dot.active, .dot:hover {
+  background-color: var(--primary-bg-color-white);
 }
 
 /* Fading animation */
+
 .fade {
   -webkit-animation-name: fade;
   -webkit-animation-duration: 1.5s;
@@ -181,17 +186,113 @@ h1 {
 }
 
 @-webkit-keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
+  from {
+    opacity: .4
+  }
+  to {
+    opacity: 1
+  }
 }
 
 @keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
+  from {
+    opacity: .4
+  }
+  to {
+    opacity: 1
+  }
 }
 
 /* ----------X----------FIN BUTTON----------X----------*/
 
 /* ----------X----------FIN CAROUSEL----------X----------*/
 
+.bloc-video {
+  position: relative;
+  background-color: #e1e1e1;
+  min-height: 84vmin;
+  padding: 8vw 0;
+}
 
+.video {
+  width: max(60vw, 300px);
+  height: auto;
+}
+
+h3 {
+  position: absolute;
+  bottom: 0;
+  left: 50;
+  font-size: max(2vw, 16px);
+  text-align: center;
+  margin: 4vw 0;
+  color: var(--teriary-bg-color);
+}
+
+h4 {
+  font-size: max(1.5vw, 13px);
+  color: var(--primary-bg-color-white);
+  padding: 2vw 2vw 0vw 2vw;
+}
+
+p {
+  position: relative;
+  font-size: max(1vw, 10px);
+  color: var(--primary-bg-color-white);
+  padding: 1vw 2vw 2vw 2vw;
+  margin-bottom: 30px;
+  backdrop-filter: blur(100px);
+  -webkit-backdrop-filter: blur(100px);
+}
+
+p::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -15px;
+  /*Positionne verticalement la bordure plus la valeur négative est élevée, plus la bordure s'éloigne du bouton.*/
+  width: 30%;
+  height: 2px;
+}
+
+p::before{
+  background: var(--quaternary-bg-color);
+  box-shadow: 0 0 5px var(--quaternary-bg-color), 0 0 10px var(--quaternary-bg-color), 0 0 15px var(--quaternary-bg-color), 0 0 30px var(--quaternary-bg-color);
+}
+
+.bloc-section1 {
+  padding: 2vw;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.sous-bloc1 {
+  width: 35vw;
+}
+
+.sous-bloc2 {
+  width: 35vw;
+}
+
+footer{
+  margin-top: 4vw;
+}
+
+@media only screen and (max-width: 500px) {
+  .sous-bloc1 {
+    width: 90vw;
+  }
+  
+  .sous-bloc2 {
+    width: 90vw;
+  }
+
+  p::before {
+    width: 110%;
+  }
+
+  .slide {
+    background-size: 100% auto;
+  }
+}
