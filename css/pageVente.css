@@ -3,9 +3,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-html{
-    scroll-behavior: smooth;
-}
 body{
     background-image: url("/Asset/circuits3b.png");
 }
@@ -13,60 +10,82 @@ section{
     width: 100%;
     height: 100vh;
 }
-section h1{
-    color: var(--quinternary-bg-color);
-    font-family: var(--font1);
-    font-size: calc(var(--title-size) + 24px);
-}
 section h2, section p, section span, section button{
     color: var(--primary-bg-color-white);
 }
 .container-image img{
-    width: 100%;
+    width: 100%; 
 }
 .container-button{
-    font-size: var(--text-size);
-    margin: 0 1em;
+    margin-left: 1em;
 }
 .container-button button{
     border: none;
     background-color: var(--quinternary-bg-color);
     cursor: pointer;
     padding: 0.5em 1em;
-    font-size: var(--text-size);
+    font-size: calc(var(--text-size) + 0.4em);
+    box-shadow: 0.1em 0.1em 0.1em rgba(0,0,0,0.3);
 }
 .container-button span{
     background-color: var(--quinternary-bg-color);
     padding: 0.5em 1em;
-    border: none;
+    font-size: calc(var(--text-size) + 0.4em);
+    box-shadow: 0.1em 0.1em 0.1em rgba(0,0,0,0.3);
+}
+.container-button span:hover{
+    box-shadow: 0.1em 0.1em 0.1em rgba(0,0,0,0.5);
 }
 .container-image{
     width: 40%;
+    height: 100%;
+    padding: 2em 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .container-text{
     width: 60%;
-    padding: 0 8%;
+    height: 100%;
+    padding: 0 4%;
+    justify-content: center;
+    align-items: center;
 }
 .container-text h1{
-    margin: 0.5em 2em;
+    background-image: linear-gradient(45deg, var(--quaternary-bg-color) 0%, var(--quaternary-bg-color) 40%, rgb(170, 166, 166) 50%, var(--quaternary-bg-color) 60%,var(--quaternary-bg-color) 100%);
+    background-size: 4000px;
+    background-position-x: right;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    margin: 0.5em 0em 0.5em 0.5em;
+    font-family: var(--font1);
+    font-size: calc(var(--title-size) + 2em);
+    animation: slide 5s infinite;
+}
+@keyframes slide {
+    0%{background-position-x: right;}
+    100%{background-position-x: left;}
 }
 .container-text h2{
     margin: 0 1em;
     font-family: var(--font2);
-    font-size: calc(var(--title-size) + 12px);
+    font-size: calc(var(--title-size) + 0.8em);
 }
 .container-text p{
     margin: 1.5em 0;
     font-family: var(--font3);
-    font-size: calc(var(--text-size) + 6px)
+    font-size: calc(var(--text-size) + 0.4em)
 }
 /* ------------------------ 1ere section-------------------- */
 .section1{
-    background: linear-gradient(180deg, var(--secondary-bg-color-opacity), var(--teriary-bg-color-opacity));
-    
+    margin-top: 50px;
+    background: linear-gradient(180deg, var(--secondary-bg-color-opacity), var(--teriary-bg-color-opacity));    
     align-items: center;
-    padding: 0 2%;
     justify-content: space-evenly;
+}
+.section1 img{
+    animation: move 20s infinite ease-in;
 }
 /* ------------------------ 2eme section-------------------- */
 .section2{
@@ -87,15 +106,16 @@ section h2, section p, section span, section button{
 .section3{
     background: linear-gradient(0deg, var(--secondary-bg-color-opacity), var(--teriary-bg-color-opacity));
     align-items: center;
-    padding: 0 2%;
     justify-content: space-evenly;
 }
 .section3 .container-image{
     position: relative;
     height: 100%;
+    z-index: 0;
 }
 .section3 .container-image img{
     position: absolute;
+    z-index: 0;
     top: 35%;
 }
 .section3 .container-image .sprite1{
@@ -113,7 +133,6 @@ section h2, section p, section span, section button{
 .section3 .container-image .sprite4{
     z-index: 2;
     transform: translateY(-40%);
-
 }
 /* ------------------------ 4eme section-------------------- */
 .section4{
@@ -122,15 +141,71 @@ section h2, section p, section span, section button{
     padding: 0 2%;
     justify-content: space-evenly;
 }
-
-
-
-
+.section4 img{
+    animation: move 20s infinite ease-in;
+}
+@keyframes move{
+    0%{transform: scale(1) rotateY(0deg);}
+    25%{transform: scale(1.1) rotateY(20deg);}
+    50%{transform: scale(1.05) rotateY(30deg);}
+    75%{transform: scale(0.95) rotateY(10deg);}
+    100%{transform: scale(1) rotateY(0deg);}
+}
 
 /* ------------------------ Media Query -------------------- */
-@media (max-width: 800px){
-    .section1, .section3{
+@media (max-width: 1000px){
+    body{
+        font-size: 0.8em;
+    }
+    .section1, .section4{
         display: flex;
         flex-direction: column;
+    }
+    .section3{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .container-image{
+        width: 90%;
+        height: 50%;
+    }
+    .section3 .container-image{
+        width: 75%;
+    }
+    .container-image img{
+        width: 90%;
+        height: auto;
+    }
+    .section3 .container-image{
+        margin-bottom: 20em;
+    }
+    .container-text h1{
+        margin: 0.5em 0.5em;
+    }
+    .section2{
+        height: 25vh;
+    }
+    .container-text{
+        width: 90%;
+        height: 50%;
+        padding: 0 4%;
+    }
+    .container-text h1{
+        margin: 0em 0em 0.5em 0.5em;
+    }
+}
+@media (max-width: 750px){
+    body{
+        font-size: 0.7em;
+    }
+    .container-image {
+        width: 100%;
+        height: 50%;
+    }
+    .container-text{
+        height: 70%;
+    }
+    .section3 .container-image{
+        width: 90%;
     }
 }

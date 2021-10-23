@@ -5,16 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page Vente</title>
+    <title>Page Administrateur</title>
     <link rel="stylesheet" href="./css/general.css">
     <link rel="stylesheet" href="./css/CSS-header-footer-blur.css">
-    <link rel="stylesheet" href="./css/pageVente.css">
+    <link rel="stylesheet" href="./css/pageAdministrateur.css">
 </head>
 
 <body>
 
-    <!--  header -->
-    
+    <!-- header -->
     <header>
         <nav id="navbar">
             <figure class="a-logo">
@@ -51,74 +50,73 @@
         </nav>
     </header>
     <main>
-        <section class="section1 row">
-            <div class="container-image">
-                <img src="./Asset/goliath-u2.png" alt="carte graphique 1">
-            </div>
-            <div class="container-text column">
-                <h1>Goliath 4090 6G</h1>
-                <h2>The Ultimate Play</h2>
-                <p>Les GPU Goliath PTX™ série 40 offrent des performances ultimes à tous les joueurs et créateurs.
-                    Optimisés par Ampere, l’architecture QCA PTX de seconde génération, ces produits de haute
-                    technologie sont dotés de nouveaux cœurs RT et Tensor et embarquent des multiprocesseurs de flux à
-                    hautes performances pour délivrer des fonctionnalités d’IA de pointe ainsi qu’un rendu graphique
-                    ultra-immersif grâce au ray tracing.</p>
-                <div class="container-button">
-                    <span>Acheter</span>
-                    <button>+</button>
-                    <button>-</button>
+        <div class="admin-container column">
+            <div class="admin-box admin-color column">
+                <div>
+                    <h3>Changer les couleurs</h3>
+                </div>
+                <div>
+                    <div class="admin-sous-container">
+                        <p>Couleur Primaire :</p>
+                        <input type="color" name="primaryColor" id="primaryColor">
+                        <p>Opacité :</p>
+                        <input type="range" id="alpha1"  min="0" max="1" step="0.1" value="1">
+                        <input type="submit" id="button-admin-color1">
+                    </div>
+                    <div class="admin-sous-container">
+                        <p>Couleur Secondaire :</p>
+                        <input type="color" name="secondaryColor" id="secondaryColor">
+                        <p>Opacité :</p>
+                        <input type="range" id="alpha2"  min="0" max="1" step="0.1" value="1">
+                        <input type="submit" id="button-admin-color2">
+                    </div>
+                    <div class="admin-sous-container">
+                        <p>Couleur Tertiaire :</p>
+                        <input type="color" name="tertiaryColor" id="tertiaryColor">
+                        <p>Opacité :</p>
+                        <input type="range" id="alpha3"  min="0" max="1" step="0.1" value="1">
+                        <input type="submit" id="button-admin-color3">
+                    </div>
+                    <div id="reloadColor">Rafraichir</div>
+                </div>
+                <div>
+                    <ion-icon name="chevron-down-outline"></ion-icon>
                 </div>
             </div>
-        </section>
-        <section class="section2">
-            <div class="image-bg"></div>
-        </section>
-        <section class="section3 row">
-            <div class="container-text column">
-                <h1>Goliath 4090 8G</h1>
-                <h2>The Ultimate Play</h2>
-                <p>Les GPU Goliath PTX™ série 40 offrent des performances ultimes à tous les joueurs et créateurs.
-                    Optimisés par Ampere, l’architecture QCA PTX de seconde génération, ces produits de haute
-                    technologie sont dotés de nouveaux cœurs RT et Tensor et embarquent des multiprocesseurs de flux à
-                    hautes performances pour délivrer des fonctionnalités d’IA de pointe ainsi qu’un rendu graphique
-                    ultra-immersif grâce au ray tracing.</p>
-                <div class="container-button">
-                    <span>Acheter</span>
-                    <button>+</button>
-                    <button>-</button>
+            <div class="admin-box admin-image column">
+                <div>
+                    <h3>Changer les images</h3>
                 </div>
-            </div>
-            <div class="container-image">
-                <img class="sprite1" src="./Asset/cg sprite/titan-rtx-full-parallax-v022-1-cover.png"
-                    alt="carte graphique sprite1">
-                <img class="sprite2" src="./Asset/cg sprite/titan-rtx-full-parallax-v022-2-fans.png"
-                    alt="carte graphique sprite2">
-                <img class="sprite3" src="./Asset/cg sprite/titan-rtx-full-parallax-v022-3-heatsink.png"
-                    alt="carte graphique sprite3">
-                <img class="sprite4" src="./Asset/cg sprite/titan-rtx-full-parallax-v022-4-pcb.png"
-                    alt="carte graphique sprite4">
-            </div>
-        </section>
-        <section class="section4 row">
-            <div class="container-image">
-                <img src="./Asset/goliath-3v.png" alt="carte graphique 1">
-            </div>
-            <div class="container-text column">
-                <h1>Goliath 4090 12G</h1>
-                <h2>The Ultimate Play</h2>
-                <p>Les GPU Goliath PTX™ série 40 offrent des performances ultimes à tous les joueurs et créateurs.
-                    Optimisés par Ampere, l’architecture QCA PTX de seconde génération, ces produits de haute
-                    technologie sont dotés de nouveaux cœurs RT et Tensor et embarquent des multiprocesseurs de flux à
-                    hautes performances pour délivrer des fonctionnalités d’IA de pointe ainsi qu’un rendu graphique
-                    ultra-immersif grâce au ray tracing.</p>
-                <div class="container-button">
-                    <span>Acheter</span>
-                    <button>+</button>
-                    <button>-</button>
+                <div>
+                    <div class="admin-sous-container admin-sous-container-img1">
+                        <p>1ere image Page Vente</p>
+                        <form action="">
+                            <input type="file">
+                            <div class="drop-area"></div>
+                        </form>
+                    </div>
+                    <div class="admin-sous-container admin-sous-container-img2">
+                        <p>2ème image Page Vente</p>
+                        <form action="">
+                            <input type="file">
+                            <div class="drop-area"></div>
+                        </form>
+                    </div>
+                    <div class="admin-sous-container admin-sous-container-img3">
+                        <p>3ème image Page Vente</p>
+                        <form action="">
+                            <input type="file">
+                            <div class="drop-area"></div>
+                        </form>
+                    </div>
                 </div>
-
+                <ion-icon name="chevron-down-outline"></ion-icon>
             </div>
-        </section>
+            <div class="admin-box admin-text column">
+                <h3>Changer le text</h3>
+                <ion-icon name="chevron-down-outline"></ion-icon>
+            </div>
+        </div>
     </main>
     <footer class="row center">
 
@@ -127,7 +125,7 @@
             <ul class="mentions row center">
                 <li><a href="#">Politique de confidentialité</a></li>
                 <li><a href="#">Mentions légales</a></li>
-                <li><a href="pageAdministrateur.html">Page Administrateur</a></li>
+                <li><a href="#">Contact</a></li>
             </ul>
 
 
@@ -164,12 +162,12 @@
         </div>
 
     </footer>
+
     <!-- footer -->
 
     <script src="./js/pageAdministrateur.js"></script>
-    <script src="js/JS-menu-burger.js"></script>
-    <script src="js/pageVente.js"></script>
-
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>
