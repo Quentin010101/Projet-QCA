@@ -16,7 +16,8 @@ let color2 = localStorage.getItem('secondaryKey')
 let color2bis = localStorage.getItem('secondaryOpacityKey')
 let color3 = localStorage.getItem('teriaryKey')
 let color3bis = localStorage.getItem('teriaryOpacityKey')
-console.log(color1)
+
+
 root.style.cssText += color1
 root.style.cssText += color2
 root.style.cssText += color2bis
@@ -67,17 +68,28 @@ button3.addEventListener('click', function(){
 // ------------Dropdown Menue ----------------------
 
 const menu1 = document.querySelector('.admin-color > div:nth-child(2)')
+const menu2 = document.querySelector('.container-dropzone')
 const icon1 = document.querySelector('.admin-color ion-icon')
+const icon2 = document.querySelector('#icon2')
 
 icon1.addEventListener('click', function(){
     menu1.classList.toggle('menu-toggle')
     icon1.classList.toggle('icon-rotate')
 })
+icon2.addEventListener('click', function(){
+    menu2.classList.toggle('menu-toggle')
+    icon2.classList.toggle('icon-rotate')
+})
 //---------------------------------------------------
-console.log(color1)
+
 // ---------------- Rafraichir -*--------------
 const buttonReloadColor = document.getElementById("reloadColor")
 buttonReloadColor.addEventListener('click', function(){
-    localStorage.clear();
+    localStorage.removeItem("primaryKey")
+    localStorage.removeItem("secondaryKey")
+    localStorage.removeItem("secondaryOpacityKey")
+    localStorage.removeItem("teriaryOpacityKey")
+    localStorage.removeItem("teriaryKey")
     window.location.reload()
 })
+
