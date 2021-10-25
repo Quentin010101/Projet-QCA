@@ -19,25 +19,37 @@ main {
 
 /* ---------------------CAROUSEL---------------------*/
 
-.main-content {
+.main-content, .main-content2 {
   padding-top: 70px;
 }
 
-.slideshow-container {
+.main-content2{
+  display: none;
+}
+
+.slideshow-container2 {
   margin-top: 2vw;
   overflow: hidden;
-  min-height: 84vmin;
+  min-height: 85vmin;
   cursor: grab;
   /*curseur main*/
   position: relative;
 }
 
-.slideshow-container:active {
+.slideshow-container {
+  margin-top: 2vw;
+  overflow: hidden;
+  min-height: 79vmin;
+  /*curseur main*/
+  position: relative;
+}
+
+.slideshow-container2:active {
   cursor: grabbing;
   /*curseur main qui attrape*/
 }
 
-.slideshow {
+.slideshow, .slideshow2 {
   position: absolute;
   height: 100%;
   display: flex;
@@ -46,11 +58,11 @@ main {
   background-color: black;
 }
 
-.slide {
+.slide, .slide2 {
   position: relative;
   flex-shrink: 0;
   /*empêche qu'ils rétrécisent*/
-  width: 99vw;
+  width: 100vw;
   color: #fff;
   background-size: 60% auto;
   background-repeat: no-repeat;
@@ -60,6 +72,10 @@ main {
 
 .s1{
   background-size: 100% auto;
+}
+
+.s6{
+  background-size: 40% auto;
 }
 
 .overlay {
@@ -73,11 +89,11 @@ main {
   background: rgba(0, 0, 0, 0.15);
 }
 
-.slide h2 {
+.slide h2, .slide2 h2 {
   position: absolute;
-  top: clamp(10px, 2vw, 20px);
-  left: clamp(10px, 2vw, 20px);
-  font-size: clamp(20px, 3vw, 30px);
+  top: clamp(20px, 2vw, 35px);
+  left: clamp(20px, 2vw, 35px);
+  font-size: clamp(20px, 2vw, 80px);
   font-weight: 300;
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.39);
 }
@@ -99,11 +115,11 @@ main {
 }
 
 .s5 {
-  background-image: url("https://res.cloudinary.com/dvv9fvblr/image/upload/v1600300333/jdozdmhcz6rnerfeb2sa.png");
+  background-image: url("https://i2.wp.com/www.wintek.com.tn/wp-content/uploads/2020/12/GV-N306TGAMING-OC-8GD_1.png?resize=600%2C600&ssl=1");
 }
 
 .s6 {
-  background-image: url("https://www.nvidia.com/content/dam/en-zz/Solutions/geforce/ampere/30-series/geforce-ampere-architecture-background-image-spec2-bb580_440-d@2x.jpg");
+  background-image: url("https://i2.wp.com/www.wintek.com.tn/wp-content/uploads/2020/12/GV-N306TGAMING-OC-8GD_0.png?resize=600%2C600&ssl=1");
 }
 
 /* ---------------------BUTTON---------------------*/
@@ -111,14 +127,13 @@ main {
 .prev, .next {
   cursor: pointer;
   position: absolute;
-  top: 50%;
+  top: 49%;
   width: auto;
   padding: 0.8vw;
   margin-top: -22px;
   color: var(--primary-bg-color-white);
-  background-color: rgba(255, 255, 255, 0.2);
   font-weight: bold;
-  font-size: max(2vw, 20px);
+  font-size: max(2.5vw, 20px);
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
@@ -130,7 +145,7 @@ main {
 }
 
 .prev:hover, .next:hover {
-  background-color: var(--primary-bg-color-black);
+  background-color: rgb(0, 0, 0);
   color: var(--quaternary-bg-color);
   box-shadow: 0 0 5px 2px var(--quaternary-bg-color);
 }
@@ -143,15 +158,15 @@ main {
   text-align: center;
   backdrop-filter: blur(100px);
   -webkit-backdrop-filter: blur(100px);
+  padding: 1vw;
 }
 
 .dot {
   cursor: pointer;
-  height: max(0.6vw, 10px);
-  width: max(0.6vw, 10px);
-  margin: 15px 3px;
-  background-color: rgb(182, 228, 255);
-  border-radius: 50%;
+  height: max(0.1vw, 5px);
+  width: max(2vw, 20px);
+  margin: 15px 6px;
+  background-color: var(--primary-bg-color-white);
   display: inline-block;
   transition: background-color 0.6s ease;
 }
@@ -173,7 +188,7 @@ main {
 }
 
 .dot.active, .dot:hover {
-  background-color: var(--primary-bg-color-white);
+  background-color: var(--quaternary-bg-color);
 }
 
 /* Fading animation */
@@ -215,7 +230,7 @@ main {
 }
 
 .video {
-  width: max(60vw, 300px);
+  width: max(60vw, 320px);
   height: auto;
 }
 
@@ -237,7 +252,7 @@ h4 {
 
 p {
   position: relative;
-  font-size: max(1vw, 10px);
+  font-size: max(1vw, 12px);
   color: var(--primary-bg-color-white);
   padding: 1vw 2vw 2vw 2vw;
   margin-bottom: 30px;
@@ -245,12 +260,16 @@ p {
   -webkit-backdrop-filter: blur(100px);
 }
 
+.p-margFoot{
+  margin-bottom: 40px;
+}
+
 p::before {
   content: '';
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  bottom: -15px;
+  bottom: -5px;
   /*Positionne verticalement la bordure plus la valeur négative est élevée, plus la bordure s'éloigne du bouton.*/
   width: 30%;
   height: 2px;
@@ -275,10 +294,6 @@ p::before{
   width: 35vw;
 }
 
-footer{
-  margin-top: 4vw;
-}
-
 @media only screen and (max-width: 500px) {
   .sous-bloc1 {
     width: 90vw;
@@ -292,7 +307,28 @@ footer{
     width: 110%;
   }
 
-  .slide {
+  .p-margFoot::before{
+    display: none;
+  }
+
+  .slide2 {
     background-size: 100% auto;
+    width: 100vw;
+  }
+
+  .s1{
+    background-size: 160% auto;
+  }
+
+  .s6{
+    background-size: 70% auto;
+  }
+  
+  .main-content, .bloc-dot, .dot{
+    display: none;
+  }
+
+  .main-content2{
+    display: block;
   }
 }
