@@ -89,7 +89,7 @@ section h2, section p, section span, section button{
 }
 /* ------------------------ 2eme section-------------------- */
 .section2{
-    background-image: url("/Asset/geforce-ampere-rtx-games-background-image-spec2-bb580_440-t@2x.jpg");
+    background-image: url("../Asset/geforce-ampere-rtx-games-background-image-spec2-bb580_440-t@2x.jpg");
     opacity: 0.9;
     background-repeat: no-repeat;
     background-position: right 0% top 0%;

@@ -221,7 +221,7 @@
   color: black;
   display: flex;
   justify-content: center;
-  align-items: center;
+  font-size: 10px;
 }
 .cercle-active{
   animation: cercleActive 1s;   
@@ -294,7 +294,9 @@
   .social-icon {
     margin-left: 1vw;
   }
-  
+  .social-icon svg{
+    color: white;
+  }
   svg {
     width: max(1vw, 9px);
     height: max(1vw, 9px);

@@ -54,9 +54,11 @@ button3.addEventListener('click', function(){
 const menu1 = document.querySelector('.admin-color > div:nth-child(2)')
 const menu2 = document.querySelector('.container-dropzone')
 const menu3 = document.querySelector('.container-text')
+const menu4 = document.querySelector('.container-panier')
 const icon1 = document.querySelector('.admin-color ion-icon')
 const icon2 = document.querySelector('#icon2')
 const icon3 = document.querySelector('#icon3')
+const icon4 = document.querySelector('#icon4')
 
 icon1.addEventListener('click', function(){
     menu1.classList.toggle('menu-toggle')
@@ -70,8 +72,18 @@ icon3.addEventListener('click', function(){
     menu3.classList.toggle('menu-toggle')
     icon3.classList.toggle('icon-rotate')
 })
-//---------------------------------------------------
+icon4.addEventListener('click', function(){
+    menu4.classList.toggle('menu-toggle')
+    icon4.classList.toggle('icon-rotate')
+})
 
+//---------------------------------------------------
+//----------Vider corbeil-------------
+const buttonPanier = document.querySelector('.vider')
+buttonPanier.addEventListener('click', function(){
+    localStorage.removeItem('valeurAchatKey')
+    window.location.reload()
+})
 // ---------------- Rafraichir -*--------------
 const buttonReloadColor = document.getElementById("reloadColor")
 buttonReloadColor.addEventListener('click', function(){
