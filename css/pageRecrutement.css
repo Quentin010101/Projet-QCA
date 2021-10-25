@@ -12,7 +12,12 @@ main {
   justify-content: center;
   align-items: center;
   margin-top: 5vw;
-  background: linear-gradient(180deg, var(--secondary-bg-color-opacity), var(--teriary-bg-color-opacity), var(--secondary-bg-color-opacity));
+  background: linear-gradient(
+    180deg,
+    var(--secondary-bg-color-opacity),
+    var(--teriary-bg-color-opacity),
+    var(--secondary-bg-color-opacity)
+  );
 }
 
 /*-----------------------------TEXT_ICON_TITLE-----------------------------*/
@@ -39,30 +44,24 @@ li {
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-  
 }
 
 .list_annonce {
-  margin: 0.6vw 6.6vw;
+  margin: 0 4vw;
 }
 
 .icon_recrut,
 .text_annonce,
 h2,
 h1 {
-  margin: 1vw 5vw;
-}
-
-.bi-geo-alt
-{
-  margin: 0 2vw;
+  margin: 1vw 2vw;
 }
 
 .annonce1,
 .annonce2,
 .annonce3 {
-  margin-bottom: 2vw;
-  width: 55vw;
+  margin-bottom: 1vw;
+  width: 40vw;
   box-shadow: 6px 6px 10px var(--quinternary-bg-color);
   color: var(--primary-bg-color-white);
   border: solid rgb(0, 0, 0) 1px;
@@ -75,22 +74,24 @@ h1 {
 }
 
 button {
-  margin: 1vw 1vw;
-  height: 35px;
-  width: 150px;
+  width: 7.8vw;
+  padding: 0.4vw;
   border: none;
   display: flex;
   align-items: center;
   justify-content: center;
-  
   background-color: var(--quinternary-bg-color);
 }
 
 .button_recrut {
   display: flex;
   flex-direction: row;
-  margin: 0 3vw 1vw;
+  margin: -1.5vw 2vw 0.5vw;
   justify-content: flex-end;
+}
+
+.postuler {
+  font-size: max(0.8vw, 10px);
 }
 
 .offre {
@@ -99,18 +100,13 @@ button {
   align-items: flex-start;
   justify-content: space-around;
 }
-.title{
-  margin: 1vw 2vw;
-}
-
-
 /*--------------X--------------ANNONCES EMPLOIS--------------X--------------*/
 
 /*-----------------------------DEPOSE CV ET ALERTE ANNONCE-----------------------------*/
 .container_cv {
   width: 35vw;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   flex-direction: column;
   justify-content: space-evenly;
 }
@@ -118,46 +114,157 @@ button {
 .icon_alert {
   display: flex;
   justify-content: center;
-  
 }
 
 .alert_recrut,
 .inscription_alert {
+  width: 25vw;
   display: flex;
+  margin-bottom: 1vw;
   align-items: center;
   flex-direction: column;
-  width: 17vw;
-  margin-bottom: 1vw;
 }
 
 .alert_recrut {
+  margin-top: 4vw;
   border: rgb(255, 255, 255) solid 1px;
   background: var(--primary-bg-color-white);
-  box-shadow: 6px 6px 10px var(--quinternary-bg-color);
-  margin: 2vw 0 1vw;
+  box-shadow: 4px 4px 10px var(--quinternary-bg-color);
 }
 
 .alert_recrut_para {
-  padding: 0 2vw;
-  margin: 2vw 0 1vw;
+  padding: 0 1vw;
+  margin: 1vw 0 1vw;
 }
 
 img {
-  height: 5vw;
-  width: 5vw;
+  height: 3vw;
+  width: 3vw;
 }
 
 .icon_alert {
-  border: var(--quinternary-bg-color) solid 1px;
-  background: var(--quinternary-bg-color);
-  border-radius: 100%;
-  width: 7vw;
-  height: 7vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 70px;
+  width: 5vw;
+  height: 5vw;
   margin: 1vw 0;
+  background: var(--quinternary-bg-color);
+  display: flex;
+  font-size: 70px;
+  border-radius: 100%;
+  align-items: center;
+  justify-content: center;
+  border: var(--quinternary-bg-color) solid 1px;
+}
+/*----------------------------- POPUP *-----------------------------*/
+.popup {
+  position: absolute;
+  display: none;
+  z-index: 1;
+  width: 25%;
+  height: 25%;
+  top: 15%;
+  
 }
 
+h3 {
+  margin: 0 0 2vw 5vw;
+}
+
+form {
+  padding: 25px;
+  margin: 25px;
+  box-shadow: 0 2px 5px #f5f5f5;
+  background-color: var(--primary-bg-color-white);
+}
+
+input,
+textarea {
+  width: calc(100% - 18px);
+  padding: 8px;
+  margin-bottom: 20px;
+  border: 1px solid #1c87c9;
+  outline: none;
+}
+
+button:hover {
+  background:var(--teriary-bg-color);
+  color: var(--primary-bg-color-white);
+}
+
+
+
+/*-------------x--------------- POPUP *----------------x------------*/
+
+/*----------------------------- Media query----------------------------- */
+@media only screen and (max-width: 680px) {
+  main {
+    padding-top: 30px;
+  }
+
+  .section_recrut {
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+    padding-top: 25px;
+  }
+
+  .icon_recrut,
+  .text_annonce,
+  h2,
+  h1 {
+    font-size: max(1vw, 15px);
+  }
+
+  .alert_recrut,
+  .inscription_alert {
+    width: 40vw;
+    margin-top: 0;
+  }
+
+  .offre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media only screen and (max-width: 620px) {
+  main {
+    padding-top: 30px;
+  }
+
+  .section_recrut {
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+  }
+
+  .icon_recrut,
+  .text_annonce,
+  h2,
+  h1 {
+    font-size: max(1vw, 15px);
+  }
+
+  .alert_recrut,
+  .inscription_alert {
+    width: 40vw;
+    margin-top: 0;
+  }
+
+  .offre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .button_recrut {
+    justify-content: center;
+    padding-top: 15px;
+  }
+}
+
+/*--------------X-------------- Media query------------------X---------- */
+
 /*--------------X--------------DEPOSE CV ET ALERTE ANNONCE--------------X--------------*/
+
+/* -----------------------------FORMULAIRE POP-UP----------------------------- */
