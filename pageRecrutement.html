@@ -167,7 +167,7 @@
                     <input type="text" id="prenom" name="prenom" placeholder="Votre prenom" required><br>
 
                     <label for="email">Email*</label>
-                    <input type="email" id="email" name="email" placeholder="Votre email "><br>
+                    <input type="email" id="email" name="email" placeholder="Votre email " required><br>
 
                     <label for="cv">Cv</label>
                     <input type="file" id="cv" name="cv">
@@ -176,7 +176,10 @@
                     <div>
                         <textarea rows="4"></textarea>
                     </div>
-                    <button id="button_form" type="submit" href="/" value="valider">ENVOYER</button>
+                    <div class="button_pull">
+                        <button id="button_form" type="submit" href="/" value="valider">ENVOYER</button>
+                    </div>
+                    
                 </form>
             </div>
 
