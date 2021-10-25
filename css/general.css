@@ -1,3 +1,7 @@
+@font-face{font-family: 'Roboto-Regular'; src: url('../Asset/polices/Roboto-Regular.ttf');}
+@font-face{font-family: 'Poppins-Regular'; src: url('../Asset/polices/Poppins-Regular.ttf');}
+@font-face{font-family: 'Roboto-Thin'; src: url('../Asset/polices/Roboto-Thin.ttf');}
+
 :root {
     /* ---------------Variable couleur----------------- */
     --primary-bg-color-black: rgb(0,0,0);
@@ -20,9 +24,9 @@
     --sous-title-size: 1.4em;
     --text-size: 1em;
     /* ---------------Variable font-family------------- */
-    --font1: roboto;
-    --font2: cursive;
-    --font3: arial;
+    --font1: 'Roboto-Regular', sans-serif;
+    --font2: 'Poppins-Regular', sans-serif;
+    --font3: 'Roboto-Thin', sans-serif;
 
 }
 .column{
