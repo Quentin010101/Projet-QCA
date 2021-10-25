@@ -56,61 +56,65 @@
                     <h3>Changer les couleurs</h3>
                 </div>
                 <div>
-                    <div class="admin-sous-container">
-                        <p>Couleur Primaire :</p>
-                        <input type="color" name="primaryColor" id="primaryColor">
-                        <p>Opacité :</p>
-                        <input type="range" id="alpha1"  min="0" max="1" step="0.1" value="1">
-                        <input type="submit" id="button-admin-color1">
+                    <div>
+                        <div class="admin-sous-container">
+                            <p>Couleur Primaire :</p>
+                            <input type="color" name="primaryColor" id="primaryColor">
+                            <p>Opacité :</p>
+                            <input type="range" id="alpha1" min="0" max="1" step="0.1" value="1">
+                            <input type="submit" id="button-admin-color1" value="Sauvegarder">
+                        </div>
+                        <div class="admin-sous-container">
+                            <p>Couleur Secondaire :</p>
+                            <input type="color" name="secondaryColor" id="secondaryColor">
+                            <p>Opacité :</p>
+                            <input type="range" id="alpha2" min="0" max="1" step="0.1" value="1">
+                            <input type="submit" id="button-admin-color2" value="Sauvegarder">
+                        </div>
+                        <div class="admin-sous-container">
+                            <p>Couleur Tertiaire :</p>
+                            <input type="color" name="tertiaryColor" id="tertiaryColor">
+                            <p>Opacité :</p>
+                            <input type="range" id="alpha3" min="0" max="1" step="0.1" value="1">
+                            <input type="submit" id="button-admin-color3" value="Sauvegarder">
+                        </div>
                     </div>
-                    <div class="admin-sous-container">
-                        <p>Couleur Secondaire :</p>
-                        <input type="color" name="secondaryColor" id="secondaryColor">
-                        <p>Opacité :</p>
-                        <input type="range" id="alpha2"  min="0" max="1" step="0.1" value="1">
-                        <input type="submit" id="button-admin-color2">
-                    </div>
-                    <div class="admin-sous-container">
-                        <p>Couleur Tertiaire :</p>
-                        <input type="color" name="tertiaryColor" id="tertiaryColor">
-                        <p>Opacité :</p>
-                        <input type="range" id="alpha3"  min="0" max="1" step="0.1" value="1">
-                        <input type="submit" id="button-admin-color3">
-                    </div>
-                    <div id="reloadColor">Rafraichir</div>
+                    <button id="reloadColor">Couleur par default</button>
                 </div>
                 <div>
                     <ion-icon name="chevron-down-outline"></ion-icon>
                 </div>
             </div>
+            <!---- Image ----->
             <div class="admin-box admin-image column">
                 <div>
                     <h3>Changer les images</h3>
                 </div>
-                <div>
-                    <div class="admin-sous-container admin-sous-container-img1">
-                        <p>1ere image Page Vente</p>
-                        <form action="">
-                            <input type="file">
-                            <div class="drop-area"></div>
-                        </form>
+                <div class="container-dropzone">
+                    <div>
+                        <div class="drop-area">
+                            <ion-icon name="image-outline"></ion-icon>
+                            <p>Placer votre image</p>
+                        </div>
+                        <div class="container-image"></div>
+                        <div>
+                            <div>
+                                <p>Page vente image 1 :</p>
+                                <button id="reloadColor" class="button-img1">Remplacer par cette nouvelle image</button>
+                                <img id="img1" src="#" alt="">
+                            </div>
+                            <div>
+                                <p>Page vente image 2 :</p>
+                                <button id="reloadColor" class="button-img2">Remplacer par cette nouvelle image</button>
+                                <img id="img2" src="#" alt="">
+                            </div>
+                        </div>
                     </div>
-                    <div class="admin-sous-container admin-sous-container-img2">
-                        <p>2ème image Page Vente</p>
-                        <form action="">
-                            <input type="file">
-                            <div class="drop-area"></div>
-                        </form>
-                    </div>
-                    <div class="admin-sous-container admin-sous-container-img3">
-                        <p>3ème image Page Vente</p>
-                        <form action="">
-                            <input type="file">
-                            <div class="drop-area"></div>
-                        </form>
-                    </div>
+                    <button id="reloadImage">Image par default</button>
                 </div>
-                <ion-icon name="chevron-down-outline"></ion-icon>
+                <div>
+                    <ion-icon id="icon2" name="chevron-down-outline"></ion-icon>
+                </div>
             </div>
             <div class="admin-box admin-text column">
                 <h3>Changer le text</h3>
@@ -164,7 +168,7 @@
     </footer>
 
     <!-- footer -->
-
+    <script src="./js/pageAdministrateurDrag&Drop.js"></script>
     <script src="./js/pageAdministrateur.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
