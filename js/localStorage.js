@@ -30,3 +30,18 @@ function changementImg (){
     }
 }
 changementImg()
+
+//----------------- recuperation valeur Achat ---------------------------
+const cercle = document.querySelector('.cercle')
+let valeurAchat = localStorage.getItem('valeurAchatKey')
+cercle.innerText = valeurAchat
+
+console.log(valeurAchat)
+panierVisibility()
+function panierVisibility (){
+if(valeurAchat == 0 || valeurAchat == NaN || valeurAchat == null){
+    cercle.style.visibility = "hidden"
+} else {
+    cercle.style.visibility = "visible"
+}
+}

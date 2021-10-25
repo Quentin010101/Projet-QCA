@@ -66,7 +66,7 @@ main{
     font-family: var(--font3);
     margin: 20px 20px;
 }
-.admin-color > div:nth-child(3), .admin-image > div:nth-child(3), .admin-text > div:nth-child(3){
+.admin-color > div:nth-child(3), .admin-image > div:nth-child(3), .admin-text > div:nth-child(3), .admin-panier > div:nth-child(3){
     display: flex;
     justify-content: flex-end;
 }
@@ -104,6 +104,13 @@ main{
     border: 5px dotted gray;
     margin: 0 50px;
 }
+/* //-----------------Container Panier------------ */
+.container-panier{
+    max-height: 0px;
+    transition: max-height 1s;
+    overflow: hidden;
+}
+
 /* //-----------------Container Text------------ */
 .container-text{
     max-height: 0px;

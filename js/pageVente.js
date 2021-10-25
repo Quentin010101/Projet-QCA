@@ -61,17 +61,25 @@ window.addEventListener('scroll', function(){
 //-------------------------Cercle --------------------------------------
 const buttonPlus = document.querySelectorAll('.buttonPlus')
 const buttonMoins = document.querySelectorAll('.buttonMoins')
-const cercle = document.querySelector('.cercle')
+let newValeur
+
+
 
 buttonPlus.forEach( function(e){
     e.addEventListener('click', function(){
-        let oldValeur = parseInt(cercle.innerHTML)
-        let newValeur = oldValeur + 1
-        cercle.innerHTML = newValeur
+        let oldValeur = parseInt(cercle.innerText)
+        if(!oldValeur){
+            oldValeur = 0
+        }
+        console.log(oldValeur)
+        newValeur = oldValeur + 1
         cercle.classList.add('cercle-active')
         setTimeout(function (){
             cercle.classList.remove('cercle-active')
         }, 1000)
+        localStorage.setItem('valeurAchatKey',newValeur)
+        cercle.innerText = newValeur
+        visibilityPanier()
     })
 });
 buttonMoins.forEach( function(e){
@@ -80,11 +88,21 @@ buttonMoins.forEach( function(e){
         if(oldValeur == 0){
             return alert("buy more !!!!!!!!!")
         }
-        let newValeur = oldValeur - 1
+        newValeur = oldValeur - 1
         cercle.innerHTML = newValeur
         cercle.classList.add('cercle-active')
         setTimeout(function (){
             cercle.classList.remove('cercle-active')
         }, 1000)
+        localStorage.setItem('valeurAchatKey',newValeur)
+        visibilityPanier()
     })
 });
+
+function visibilityPanier (){
+    if(newValeur == 0 || newValeur == NaN){
+        cercle.style.visibility = "hidden"
+    } else {
+        cercle.style.visibility = "visible"
+    }
+}
