@@ -1,0 +1,19 @@
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-image: url("../Asset/circuits3b.png");
+    background-attachment: fixed;
+    background-repeat: repeat;
+    width: 100%;
+    margin: 0;
+  }
+  
+  main {
+    background: linear-gradient(180deg, var(--secondary-bg-color-opacity), var(--teriary-bg-color-opacity), var(--secondary-bg-color-opacity));
+    background-attachment: scroll;
+    height: 100vh;
+  }
