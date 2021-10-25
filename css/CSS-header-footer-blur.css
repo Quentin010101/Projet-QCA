@@ -129,7 +129,7 @@
   }
   
   .container .btn:hover a {
-    letter-spacing: 4px;
+    letter-spacing: 3.5px;
   }
   
   .container .btn a::before {
