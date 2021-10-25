@@ -69,8 +69,10 @@ button3.addEventListener('click', function(){
 
 const menu1 = document.querySelector('.admin-color > div:nth-child(2)')
 const menu2 = document.querySelector('.container-dropzone')
+const menu3 = document.querySelector('.container-text')
 const icon1 = document.querySelector('.admin-color ion-icon')
 const icon2 = document.querySelector('#icon2')
+const icon3 = document.querySelector('#icon3')
 
 icon1.addEventListener('click', function(){
     menu1.classList.toggle('menu-toggle')
@@ -79,6 +81,10 @@ icon1.addEventListener('click', function(){
 icon2.addEventListener('click', function(){
     menu2.classList.toggle('menu-toggle')
     icon2.classList.toggle('icon-rotate')
+})
+icon3.addEventListener('click', function(){
+    menu3.classList.toggle('menu-toggle')
+    icon3.classList.toggle('icon-rotate')
 })
 //---------------------------------------------------
 
@@ -93,3 +99,27 @@ buttonReloadColor.addEventListener('click', function(){
     window.location.reload()
 })
 
+// ------------ Changement Police d'ecriture ----------
+
+let radioButton1 = document.querySelectorAll('input[name=police1]')
+let radioButton2 = document.querySelectorAll('input[name=police2]')
+let radioButton3 = document.querySelectorAll('input[name=police3]')
+
+radioButton1.forEach(function(){
+    addEventListener('change', function(){
+    let valuePolicePrincipal = document.querySelector('input[name=police1]:checked').value
+    root.style.cssText += "--font1 : " + valuePolicePrincipal
+})    
+})
+radioButton2.forEach(function(){
+    addEventListener('change', function(){
+    let valuePolicePrincipal = document.querySelector('input[name=police2]:checked').value
+    root.style.cssText += "--font2 : " + valuePolicePrincipal
+})    
+})
+radioButton3.forEach(function(){
+    addEventListener('change', function(){
+    let valuePolicePrincipal = document.querySelector('input[name=police3]:checked').value
+    root.style.cssText += "--font3 : " + valuePolicePrincipal
+})    
+})

@@ -66,7 +66,7 @@ main{
     font-family: var(--font3);
     margin: 20px 20px;
 }
-.admin-color > div:nth-child(3), .admin-image > div:nth-child(3){
+.admin-color > div:nth-child(3), .admin-image > div:nth-child(3), .admin-text > div:nth-child(3){
     display: flex;
     justify-content: flex-end;
 }
@@ -104,6 +104,46 @@ main{
     border: 5px dotted gray;
     margin: 0 50px;
 }
+/* //-----------------Container Text------------ */
+.container-text{
+    max-height: 0px;
+    transition: max-height 1s;
+    overflow: hidden;
+}
+        /*--------------Radio button---------------*/
+.container-text input[type="radio"]{
+    position:absolute;
+    opacity: 0;
+}
+.container-text > div{
+    display: flex;
+    align-items: center;
+    font-family: var(--font1);
+    font-size: var(--text-size);
+    margin: 0.5em 0 0.5em 4em;
+}
+.container-text > div p{
+    min-width: 200px;
+}
+.container-text > div > div{
+    margin: 1em;
+}
+.container-text label{
+    padding: 0.5em 1em 0.5em 1em;
+    background-color: rgb(172, 172, 172);
+    border-radius: 0.5em;
+    transition: all 0.5s;
+    color: rgba(0,0,0,0.8);
+}
+.container-text label:hover{
+    background-color: rgb(138, 138, 138);
+    transition: all 0.5s;
+}
+.container-text input:checked ~ label{
+    background-color: var(--quaternary-bg-color);
+}
+/* //--------x---------Container Text------x------ */
+
 /* //---------------Drag&drop-------------- */
 .activeDrop{
     border: solid green 2px;
@@ -123,7 +163,6 @@ main{
     max-height: 0px;
     transition: max-height 1s;
     overflow: hidden;
-
 }
 .container-dropzone > div{
     display: flex;
@@ -166,8 +205,6 @@ main{
     box-shadow: 0.05em 0.05em 0.1em rgba(0,0,0,0.5);
     color: white;
 }
-
-
 
 /* // ----------------- Media Query */
 
