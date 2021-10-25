@@ -5,6 +5,7 @@
 }
 
 body {
+  font-family: var(--font1);
   background-image: url("../Asset/circuits3b.png");
   background-attachment: fixed;
   background-repeat: repeat;
@@ -96,6 +97,7 @@ main {
   font-size: clamp(20px, 2vw, 80px);
   font-weight: 300;
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.39);
+  font-family: var(--font3);
 }
 
 .s1 {
