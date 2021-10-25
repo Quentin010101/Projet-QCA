@@ -57,22 +57,6 @@ window.addEventListener('scroll', function(){
 
 
 
-//----------------- recuperation image from admin ---------------------------
-let imgVente1 = document.getElementById('imgVente1')
-let urlImg1 = localStorage.getItem('image1')
-let imgVente2 = document.getElementById('imgVente2')
-let urlImg2 = localStorage.getItem('image2')
-
-function changementImg (){
-    if(urlImg2){
-        imgVente2.src = urlImg2
-    }
-    if(urlImg1){
-        imgVente1.src = urlImg1
-    }
-}
-changementImg()
-
 
 //-------------------------Cercle --------------------------------------
 const buttonPlus = document.querySelectorAll('.buttonPlus')

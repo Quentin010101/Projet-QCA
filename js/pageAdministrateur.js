@@ -1,4 +1,4 @@
-const root = document.querySelector(':root')
+
 const colorP = document.getElementById('primaryColor')
 const colorS = document.getElementById('secondaryColor')
 const colorT = document.getElementById('tertiaryColor')
@@ -9,20 +9,6 @@ const alpha1 = document.getElementById("alpha1")
 const alpha2 = document.getElementById("alpha2")
 const alpha3 = document.getElementById("alpha3")
 let colorRGB
-
-// -------------Changement des couleurs--------------
-let color1 = localStorage.getItem('primaryKey')
-let color2 = localStorage.getItem('secondaryKey')
-let color2bis = localStorage.getItem('secondaryOpacityKey')
-let color3 = localStorage.getItem('teriaryKey')
-let color3bis = localStorage.getItem('teriaryOpacityKey')
-
-
-root.style.cssText += color1
-root.style.cssText += color2
-root.style.cssText += color2bis
-root.style.cssText += color3
-root.style.cssText += color3bis
 
 
 // ------------ conversion couleur input en rgba----------
@@ -62,9 +48,7 @@ button3.addEventListener('click', function(){
     localStorage.setItem('teriaryKey', teriaryVariable)
     localStorage.setItem('teriaryOpacityKey', teriaryVariableOpacity)
 })
-// window.addEventListener('load', function(){
-//     root.style.cssText += "--primary-bg-color-black: " + colorP.value
-// })
+
 // ------------Dropdown Menue ----------------------
 
 const menu1 = document.querySelector('.admin-color > div:nth-child(2)')
