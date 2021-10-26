@@ -67,7 +67,7 @@ section h2, section p, section span, section button{
     -webkit-background-clip: text;
     color: transparent;
     margin: 0.5em 0em 0.5em 0.5em;
-    font-family: var(--font1);
+    font-family: var(--font3);
     font-size: calc(var(--title-size) + 2em);
     animation: slide 5s infinite;
 }
