@@ -2,6 +2,7 @@
   /* ---------------------HEADER---------------------*/
 
   header {
+    font-family: var(--font2);
     position: fixed;
     top:0;
     width: 100%;
@@ -97,7 +98,7 @@
   
   .container .btn {
     position: relative;
-    width: 130px;
+    width: 140px;
     height: 40px;
     margin-left: 20px;
   }
@@ -128,7 +129,7 @@
   }
   
   .container .btn:hover a {
-    letter-spacing: 4px;
+    letter-spacing: 3.5px;
   }
   
   .container .btn a::before {
@@ -208,7 +209,32 @@
   }
   
   /* ----------X----------FIN BUTTON----------X----------*/
-  
+  /* //------------------ Cercle ------------------- */
+.cercle{
+  position: absolute;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background: white;
+  top: 0;
+  right: 0;
+  color: black;
+  display: flex;
+  justify-content: center;
+  font-size: 10px;
+}
+.cercle-active{
+  animation: cercleActive 1s;   
+}
+.shopping-nav{
+  position:relative;
+}
+@keyframes cercleActive {
+  0% {transform: scale(1); box-shadow: 0em 0em 0.2em white;}
+  50% {transform: scale(1.5); box-shadow: 0em 0em 0.2em 0.1em white;}
+  100% {transform: scale(1); box-shadow: 0em 0em 0.2em white;}
+}
+/* //-----------x------- Cercle -----------x-------- */
   /* ----------X----------FIN HEADER----------X----------*/
 
 
@@ -225,7 +251,7 @@
     color: var(--primary-bg-color-white);
     list-style-type: none;
     padding: 1vw 0vw;
-    font-size: max(1vw, 10px);
+    font-size: max(1vw, 8px);
     backdrop-filter: blur(100px);
     -webkit-backdrop-filter: blur(100px);
   }
@@ -268,7 +294,9 @@
   .social-icon {
     margin-left: 1vw;
   }
-  
+  .social-icon svg{
+    color: white;
+  }
   svg {
     width: max(1vw, 9px);
     height: max(1vw, 9px);

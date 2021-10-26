@@ -17,7 +17,7 @@
     <header>
         <nav id="navbar">
             <figure class="a-logo">
-                <img class="img-logo" src="Asset/logo3Recad.png" alt="logo" />
+                <img class="img-logo" src="Asset/logo-bleu.png" alt="logo" />
             </figure>
             <div id="navbar-nav">
                 <ul class="ul-nav container">
@@ -32,6 +32,7 @@
                     </li>
                     <li class="li-nav column">
                         <a class="shopping-nav nav-link" href="https://www.materiel.net/cartes-graphiques/c425/">
+                            <div class="cercle">0</div>
                             <svg class="panier" xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 0 24 24"
                                 width="30px" fill="#FFFFFF">
                                 <path d="M0 0h24v24H0V0z" fill="none" />
@@ -56,76 +57,150 @@
                     <h3>Changer les couleurs</h3>
                 </div>
                 <div>
-                    <div class="admin-sous-container">
-                        <p>Couleur Primaire :</p>
-                        <input type="color" name="primaryColor" id="primaryColor">
-                        <input type="submit" id="button-admin-color1">
+                    <div>
+                        <div class="admin-sous-container">
+                            <p>Couleur Primaire :</p>
+                            <input type="color" name="primaryColor" id="primaryColor">
+                            <p>Opacité :</p>
+                            <input type="range" id="alpha1" min="0" max="1" step="0.1" value="1">
+                            <input type="submit" id="button-admin-color1" value="Sauvegarder">
+                        </div>
+                        <div class="admin-sous-container">
+                            <p>Couleur Secondaire :</p>
+                            <input type="color" name="secondaryColor" id="secondaryColor">
+                            <p>Opacité :</p>
+                            <input type="range" id="alpha2" min="0" max="1" step="0.1" value="1">
+                            <input type="submit" id="button-admin-color2" value="Sauvegarder">
+                        </div>
+                        <div class="admin-sous-container">
+                            <p>Couleur Tertiaire :</p>
+                            <input type="color" name="tertiaryColor" id="tertiaryColor">
+                            <p>Opacité :</p>
+                            <input type="range" id="alpha3" min="0" max="1" step="0.1" value="1">
+                            <input type="submit" id="button-admin-color3" value="Sauvegarder">
+                        </div>
                     </div>
-                    <div class="admin-sous-container">
-                        <p>Couleur Secondaire :</p>
-                        <input type="color" name="secondaryColor" id="secondaryColor">
-                        <input type="submit" id="button-admin-color2">
-                    </div>
-                    <div class="admin-sous-container">
-                        <p>Couleur Tertiaire :</p>
-                        <input type="color" name="tertiaryColor" id="tertiaryColor">
-                        <input type="submit" id="button-admin-color3">
-                    </div>
+                    <button id="reloadColor">Couleur par default</button>
                 </div>
                 <div>
                     <ion-icon name="chevron-down-outline"></ion-icon>
                 </div>
             </div>
+            <!---- Image ----->
             <div class="admin-box admin-image column">
                 <div>
                     <h3>Changer les images</h3>
                 </div>
-                <div>
-                    <div class="admin-sous-container admin-sous-container-img1">
-                        <p>1ere image Page Vente</p>
-                        <form action="">
-                            <input type="file">
-                            <div class="drop-area"></div>
-                        </form>
+                <div class="container-dropzone">
+                    <div>
+                        <div class="drop-area">
+                            <ion-icon name="image-outline"></ion-icon>
+                            <p>Placer votre image</p>
+                        </div>
+                        <div class="container-image"></div>
+                        <div>
+                            <div>
+                                <p>Page vente image 1 :</p>
+                                <button id="reloadColor" class="button-img1">Remplacer par cette nouvelle image</button>
+                                <img id="img1" src="#" alt="">
+                            </div>
+                            <div>
+                                <p>Page vente image 2 :</p>
+                                <button id="reloadColor" class="button-img2">Remplacer par cette nouvelle image</button>
+                                <img id="img2" src="#" alt="">
+                            </div>
+                        </div>
                     </div>
-                    <div class="admin-sous-container admin-sous-container-img2">
-                        <p>2ème image Page Vente</p>
-                        <form action="">
-                            <input type="file">
-                            <div class="drop-area"></div>
-                        </form>
-                    </div>
-                    <div class="admin-sous-container admin-sous-container-img3">
-                        <p>3ème image Page Vente</p>
-                        <form action="">
-                            <input type="file">
-                            <div class="drop-area"></div>
-                        </form>
-                    </div>
+                    <button id="reloadImage">Image par default</button>
                 </div>
-                <ion-icon name="chevron-down-outline"></ion-icon>
+                <div>
+                    <ion-icon id="icon2" name="chevron-down-outline"></ion-icon>
+                </div>
             </div>
             <div class="admin-box admin-text column">
-                <h3>Changer le text</h3>
-                <ion-icon name="chevron-down-outline"></ion-icon>
+                <div>
+                    <h3>Changer les polices d'écriture</h3>
+                </div>
+                <div class="container-text">
+                    <div>
+                        <p>Police d'écriture principal :</p>
+                        <div>
+                            <input type="radio" id="policePrincipal-1" name="police1" value="roboto">
+                            <label for="policePrincipal-1">Police 1</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="policePrincipal-2" name="police1" value="cursive">
+                            <label for="policePrincipal-2">Police 2</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="policePrincipal-3" name="police1" value="arial">
+                            <label for="policePrincipal-3">Police 3</label>
+                        </div>                       
+                    </div>
+                    <div>
+                        <p>Police d'écriture secondaire :</p>
+                        <div>
+                            <input type="radio" id="policeSecondaire-1" name="police2" value="roboto">
+                            <label for="policeSecondaire-1">Police 1</label>
+                        </div>                      
+                        <div>
+                            <input type="radio" id="policeSecondaire-2" name="police2" value="cursive">
+                            <label for="policeSecondaire-2">Police 2</label>
+                        </div>                       
+                        <div>
+                            <input type="radio" id="policeSecondaire-3" name="police2" value="arial">
+                            <label for="policeSecondaire-3">Police 3</label>
+                        </div>                       
+                    </div>
+                    <div>
+                        <p>Police d'écriture tertiaire :</p>
+                        <div>
+                            <input type="radio" id="policeTertiaire-1" name="police3" value="roboto">
+                            <label for="policeTertiaire-1">Police 1</label>
+                        </div>                       
+                        <div>
+                            <input type="radio" id="policeTertiaire-2" name="police3" value="cursive">
+                            <label for="policeTertiaire-2">Police 2</label>
+                        </div>                        
+                        <div>
+                            <input type="radio" id="policeTertiaire-3" name="police3" value="arial">
+                            <label for="policeTertiaire-3">Police 3</label>
+                        </div>                        
+                    </div>
+                </div>
+                <div>
+                    <ion-icon id="icon3" name="chevron-down-outline"></ion-icon>
+                </div>
+            </div>
+            <div class="admin-box admin-panier column">
+                <div>
+                    <h3>Vider le panier</h3>
+                </div>
+                <div class="container-panier">
+                    <button class="vider">Vider le panier</button>
+                </div>
+                <div>
+                    <ion-icon id="icon4" name="chevron-down-outline"></ion-icon>
+                </div>
             </div>
         </div>
     </main>
     <footer class="row center">
 
-        <a href="accueil.html" class="a-logoFoot"><img class="img-logo" src="Asset/logo3Recad.png" alt="logo" /></a>
+        <a href="accueil.html" class="a-logoFoot"><img class="img-logo" src="Asset/logo-bleu.png" alt="logo" /></a>
         <div class="column center">
             <ul class="mentions row center">
-                <li><a href="#">Politique de confidentialité</a></li>
+                <li><a href="confidentialité.html">Confidentialité</a></li>
                 <li><a href="#">Mentions légales</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="pageAdministrateur.html">Administration</a></li>
+
             </ul>
 
 
             <ul class="copy-icon row">
                 <li class="copyright">©2021 Quentin Cyril Adrien, Inc</li>
                 <li class="social-icon">
-                    <a>
+                    <a href="https://fr-fr.facebook.com/" target="_blank">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                             class="bi bi-facebook" viewBox="0 0 16 16">
                             <path
@@ -134,7 +209,7 @@
                     </a>
                 </li>
                 <li class="social-icon">
-                    <a>
+                    <a href="https://twitter.com/?lang=fr" target="_blank">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                             class="bi bi-twitter" viewBox="0 0 16 16">
                             <path
@@ -143,7 +218,7 @@
                     </a>
                 </li>
                 <li class="social-icon">
-                    <a>
+                    <a href="https://fr.linkedin.com/" target="_blank">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                             class="bi bi-linkedin" viewBox="0 0 16 16">
                             <path
@@ -157,7 +232,8 @@
     </footer>
 
     <!-- footer -->
-
+    <script src="./js/localStorage.js"></script>
+    <script src="./js/pageAdministrateurDrag&Drop.js"></script>
     <script src="./js/pageAdministrateur.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>

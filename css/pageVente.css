@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body{
-    background-image: url("/Asset/circuits3b.png");
+    background-image: url("../Asset/circuits3b.png");
 }
 section{
     width: 100%;
@@ -59,7 +59,7 @@ section h2, section p, section span, section button{
     -webkit-background-clip: text;
     color: transparent;
     margin: 0.5em 0em 0.5em 0.5em;
-    font-family: var(--font1);
+    font-family: var(--font3);
     font-size: calc(var(--title-size) + 2em);
     animation: slide 5s infinite;
 }
@@ -69,7 +69,7 @@ section h2, section p, section span, section button{
 }
 .container-text h2{
     margin: 0 1em;
-    font-family: var(--font2);
+    font-family: var(--font3);
     font-size: calc(var(--title-size) + 0.8em);
 }
 .container-text p{
@@ -79,7 +79,7 @@ section h2, section p, section span, section button{
 }
 /* ------------------------ 1ere section-------------------- */
 .section1{
-    margin-top: 50px;
+    padding-top: 50px;
     background: linear-gradient(180deg, var(--secondary-bg-color-opacity), var(--teriary-bg-color-opacity));    
     align-items: center;
     justify-content: space-evenly;
@@ -89,7 +89,7 @@ section h2, section p, section span, section button{
 }
 /* ------------------------ 2eme section-------------------- */
 .section2{
-    background-image: url("/Asset/geforce-ampere-rtx-games-background-image-spec2-bb580_440-t@2x.jpg");
+    background-image: url("../Asset/geforce-ampere-rtx-games-background-image-spec2-bb580_440-t@2x.jpg");
     opacity: 0.9;
     background-repeat: no-repeat;
     background-position: right 0% top 0%;
@@ -144,6 +144,8 @@ section h2, section p, section span, section button{
 .section4 img{
     animation: move 20s infinite ease-in;
 }
+
+
 @keyframes move{
     0%{transform: scale(1) rotateY(0deg);}
     25%{transform: scale(1.1) rotateY(20deg);}

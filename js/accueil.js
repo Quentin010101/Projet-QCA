@@ -1,51 +1,10 @@
-//----------------------------------------------------------MENU BURGER
-const panels = document.querySelectorAll('.panel');
-
-    function toggleOpen() {
-      console.log('Hello');
-      this.classList.toggle('open');
-    }
-
-    function toggleActive(e) {
-      console.log(e.propertyName);
-      if (e.propertyName.includes('flex')) {
-        this.classList.toggle('open-active');
-      }
-    }
-
-    panels.forEach(panel => panel.addEventListener('click', toggleOpen));
-    panels.forEach(panel => panel.addEventListener('transitionend', toggleActive));
-
-
-const hamburger = document.querySelector(".hamburger");
-const navMenu = document.querySelector(".ul-nav");
-
-hamburger.addEventListener("click", mobileMenu);
-
-function mobileMenu() {
-    hamburger.classList.toggle("active");
-    navMenu.classList.toggle("active");
-}
-
-//Ferme le menu quand clic sur liens
-const navLink = document.querySelectorAll(".nav-link");
-
-navLink.forEach(n => n.addEventListener("click", closeMenu));
-
-function closeMenu() {
-    hamburger.classList.remove("active");
-    navMenu.classList.remove("active");
-}
-//----------------------------------------------------------FIN MENU BURGER
-
-
 //----------------------------------------------------------CAROUSEL
 
 //slide de base
 
 
 //Sélection du container englobant les slides
-const slider = document.querySelector('.slideshow-container');
+const slider = document.querySelector('.slideshow-container2');
 //Quand je tiens mon carousel, je veux garder une trace de ça. Est-ce-que je tiens le carousel ou pas?
 let holding = false;
 //Quand je commence à faire glisser le carousel la première fois, je veux cette position (pour l'instant c'est indéfini)
@@ -112,7 +71,7 @@ slider.addEventListener('mousemove', e => {
     Comme les valeurs en allant à gauche sont négatives, le glissement est bloqué,
     et comme les valeurs de droite sont positives le glissement vers la droite se fera jusqu'à la limite du carousel.
     Le * 2 multiplie la vitesse du scroll. */
-    const scrolled = (x - firstClickX) * 1.2;
+    const scrolled = (x - firstClickX) * 1.5;
     /* Trace du scroll qui a été fait.
      "aperçuScrollGauche = scrollLeft (qui définit le nombre de pixels quand le contenu est défilé vers la gauche) */
     const prevScrollLeft = slider.scrollLeft;
