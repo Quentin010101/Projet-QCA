@@ -60,9 +60,10 @@ const icon2 = document.querySelector('#icon2')
 const icon3 = document.querySelector('#icon3')
 const icon4 = document.querySelector('#icon4')
 
+
 icon1.addEventListener('click', function(){
     menu1.classList.toggle('menu-toggle')
-    icon1.classList.toggle('icon-rotate')
+    icon1.classList.toggle('icon-rotate')   
 })
 icon2.addEventListener('click', function(){
     menu2.classList.toggle('menu-toggle')
@@ -100,22 +101,37 @@ buttonReloadColor.addEventListener('click', function(){
 let radioButton1 = document.querySelectorAll('input[name=police1]')
 let radioButton2 = document.querySelectorAll('input[name=police2]')
 let radioButton3 = document.querySelectorAll('input[name=police3]')
+let buttonPolice = document.querySelector('.buttonPolice')
 
 radioButton1.forEach(function(){
     addEventListener('change', function(){
     let valuePolicePrincipal = document.querySelector('input[name=police1]:checked').value
     root.style.cssText += "--font1 : " + valuePolicePrincipal
+    localStorage.setItem('font1Key',valuePolicePrincipal)
 })    
 })
 radioButton2.forEach(function(){
     addEventListener('change', function(){
     let valuePolicePrincipal = document.querySelector('input[name=police2]:checked').value
     root.style.cssText += "--font2 : " + valuePolicePrincipal
+    localStorage.setItem('font2Key',valuePolicePrincipal)
 })    
 })
 radioButton3.forEach(function(){
     addEventListener('change', function(){
     let valuePolicePrincipal = document.querySelector('input[name=police3]:checked').value
     root.style.cssText += "--font3 : " + valuePolicePrincipal
+    localStorage.setItem('font3Key',valuePolicePrincipal)
 })    
 })
+
+buttonPolice.addEventListener('click', function(){
+    localStorage.removeItem('font1Key')
+    localStorage.removeItem('font2Key')
+    localStorage.removeItem('font3Key')
+    window.location.reload()
+})
+
+// ---------------------Button ------------------------------
+
+
