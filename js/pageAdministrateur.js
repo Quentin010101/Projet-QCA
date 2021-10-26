@@ -101,6 +101,7 @@ buttonReloadColor.addEventListener('click', function(){
 let radioButton1 = document.querySelectorAll('input[name=police1]')
 let radioButton2 = document.querySelectorAll('input[name=police2]')
 let radioButton3 = document.querySelectorAll('input[name=police3]')
+let buttonPolice = document.querySelector('.buttonPolice')
 
 radioButton1.forEach(function(){
     addEventListener('change', function(){
@@ -122,6 +123,13 @@ radioButton3.forEach(function(){
     root.style.cssText += "--font3 : " + valuePolicePrincipal
     localStorage.setItem('font3Key',valuePolicePrincipal)
 })    
+})
+
+buttonPolice.addEventListener('click', function(){
+    localStorage.removeItem('font1Key')
+    localStorage.removeItem('font2Key')
+    localStorage.removeItem('font3Key')
+    window.location.reload()
 })
 
 // ---------------------Button ------------------------------
