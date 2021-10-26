@@ -18,7 +18,6 @@ main{
     width: 85%;
 }
 .admin-box{
-    border: solid 2px var(--teriary-bg-color-opacity);
     position: relative;
     margin: 10px 0;
     background: rgb(220,220,220);
