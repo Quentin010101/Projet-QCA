@@ -94,8 +94,8 @@ main {
   position: absolute;
   top: clamp(20px, 2vw, 35px);
   left: clamp(20px, 2vw, 35px);
-  font-size: clamp(20px, 2vw, 80px);
-  font-weight: 300;
+  font-size: clamp(20px, 2.5vw, 80px);
+  font-weight: 600;
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.39);
   font-family: var(--font3);
 }
@@ -165,9 +165,10 @@ main {
 
 .dot {
   cursor: pointer;
-  height: max(0.1vw, 5px);
-  width: max(2vw, 20px);
-  margin: 15px 6px;
+  height: max(0.5vw, 5px);
+  width: max(2.2vw, 20px);
+  margin: 15px 8px;
+  border-radius: 5px;
   background-color: var(--primary-bg-color-white);
   display: inline-block;
   transition: background-color 0.6s ease;
@@ -237,19 +238,21 @@ main {
 }
 
 h3 {
+  font-family: var(--font2);
   position: absolute;
   bottom: 0;
   left: 50;
-  font-size: max(2vw, 16px);
+  font-size: max(2vw, 13px);
   text-align: center;
   margin: 4vw 0;
   color: var(--teriary-bg-color);
 }
 
 h4 {
-  font-size: max(1.5vw, 13px);
+  font-family: var(--font3);
+  font-size: max(1.5vw, 14px);
   color: var(--primary-bg-color-white);
-  padding: 2vw 2vw 0vw 2vw;
+  padding: 2vw 2vw 1vw 2vw;
 }
 
 p {
