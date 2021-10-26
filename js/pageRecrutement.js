@@ -36,3 +36,32 @@ function closeMenu() {
     hamburger.classList.remove("active");
     navMenu.classList.remove("active");
 }
+
+
+
+// Formulaire Pop-up
+const button1 = document.getElementById("button1");
+const popup = document.querySelector(".popup");
+button1.addEventListener("click", function(){
+popup.style.display = "block";
+}
+)
+
+const button2 = document.getElementById("button2");
+button2.addEventListener("click", function(){
+popup.style.display = "block";
+}
+)
+
+const button3 = document.getElementById("button3");
+button3.addEventListener("click", function(){
+popup.style.display = "block";
+}
+)
+
+// Button ENVOYER close/formulaire
+const buttonform = document.getElementById("button_form");
+buttonform.addEventListener("click", function(){
+  popup.style.display = "none";
+}
+)
