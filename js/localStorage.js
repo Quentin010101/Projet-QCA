@@ -45,3 +45,21 @@ if(valeurAchat == 0 || valeurAchat == NaN || valeurAchat == null){
     cercle.style.visibility = "visible"
 }
 }
+//----------------- recuperation valeur Police ---------------------------
+let policeFont1 = localStorage.getItem('font1Key')
+let policeFont2 = localStorage.getItem('font2Key')
+let policeFont3 = localStorage.getItem('font3Key')
+
+miseAJourPolice()
+
+function miseAJourPolice(){
+    if(policeFont1){
+        root.style.cssText += "--font1 : " + policeFont1   
+    }
+    if(policeFont2){
+        root.style.cssText += "--font2 : " + policeFont2
+    }
+    if(policeFont3){
+        root.style.cssText += "--font3 : " + policeFont3
+    }
+}

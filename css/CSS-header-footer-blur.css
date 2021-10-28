@@ -146,7 +146,7 @@
     background: linear-gradient(to left, rgba(255, 255, 255, 0.08), transparent);
     transform: skewX(45deg) translateX(0%);
     /*Inclinaison du dégradé="skewX" longueur du dégradé à partir du centre (width:50%) ="translateX" */
-    transition: 0.1s;
+    transition: 0.3s;
   }
   
   .container .btn:hover a::before {
@@ -246,12 +246,13 @@
   /* ---------------------FOOTER---------------------*/
   
   footer {
+    font-family: var(--font1);
     position: relative;
     background-color: var(--primary-bg-color-black);
     color: var(--primary-bg-color-white);
     list-style-type: none;
     padding: 1vw 0vw;
-    font-size: max(1vw, 8px);
+    font-size: max(1vw, 9px);
     backdrop-filter: blur(100px);
     -webkit-backdrop-filter: blur(100px);
   }
