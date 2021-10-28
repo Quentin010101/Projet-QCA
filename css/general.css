@@ -1,43 +1,50 @@
-@font-face{font-family: 'Roboto-Regular'; src: url('../Asset/polices/Roboto-Regular.ttf');}
-@font-face{font-family: 'Poppins-Regular'; src: url('../Asset/polices/Poppins-Regular.ttf');}
-@font-face{font-family: 'Roboto-Thin'; src: url('../Asset/polices/Roboto-Thin.ttf');}
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url("../Asset/polices/Roboto-Regular.ttf");
+}
+@font-face {
+  font-family: "Poppins-Regular";
+  src: url("../Asset/polices/Poppins-Regular.ttf");
+}
+@font-face {
+  font-family: "Roboto-Thin";
+  src: url("../Asset/polices/Roboto-Thin.ttf");
+}
 
 :root {
-    /* ---------------Variable couleur----------------- */
-    --primary-bg-color-black: rgb(0,0,0);
-    --primary-bg-color-white: rgb(255,255,255);
-    --secondary-bg-color: rgb(1,23,49);
-    --teriary-bg-color: rgb(71,108,141);
-    --quaternary-bg-color: rgb(120,206,255);
-    --quinternary-bg-color: rgb(91,206,255);
-    --fifth-bg-color:rgb(147,146,146);
+  /* ---------------Variable couleur----------------- */
+  --primary-bg-color-black: rgb(0, 0, 0);
+  --primary-bg-color-white: rgb(255, 255, 255);
+  --secondary-bg-color: rgb(1, 23, 49);
+  --teriary-bg-color: rgb(71, 108, 141);
+  --quaternary-bg-color: rgb(120, 206, 255);
+  --quinternary-bg-color: rgb(91, 206, 255);
+  --fifth-bg-color: rgb(147, 146, 146);
 
-    /*-------------Varible Couleur avec opacity ----------------- */
-    --opacity: 0.9;
-    --secondary-bg-color-opacity: rgba(1,23,49,var(--opacity));
-    --teriary-bg-color-opacity: rgba(71,108,141, var(--opacity));
-    --teriary-bg-color-opacity2: rgba(71,108,141, 0.5);
+  /*-------------Varible Couleur avec opacity ----------------- */
+  --opacity: 0.9;
+  --secondary-bg-color-opacity: rgba(1, 23, 49, var(--opacity));
+  --teriary-bg-color-opacity: rgba(71, 108, 141, var(--opacity));
+  --teriary-bg-color-opacity2: rgba(71, 108, 141, 0.5);
 
-
-    /* ---------------Variable font-size--------------- */
-    --title-size: 1.8em;
-    --sous-title-size: 1.4em;
-    --text-size: 1em;
-    /* ---------------Variable font-family------------- */
-    --font1: 'Roboto-Regular', sans-serif;
-    --font2: 'Poppins-Regular', sans-serif;
-    --font3: 'Roboto-Thin', sans-serif;
-
+  /* ---------------Variable font-size--------------- */
+  --title-size: 1.8em;
+  --sous-title-size: 1.4em;
+  --text-size: 1em;
+  /* ---------------Variable font-family------------- */
+  --font1: "Roboto-Regular", sans-serif;
+  --font2: "Poppins-Regular", sans-serif;
+  --font3: "Roboto-Thin", sans-serif;
 }
-.column{
-    display: flex;
-    flex-direction: column;
+.column {
+  display: flex;
+  flex-direction: column;
 }
-.row{
-    display: flex;
-    flex-direction: row;
+.row {
+  display: flex;
+  flex-direction: row;
 }
-.center{
-    justify-content: center;
-    align-items: center;
+.center {
+  justify-content: center;
+  align-items: center;
 }
