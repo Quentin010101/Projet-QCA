@@ -14,7 +14,7 @@ body {
 main {
   font-family: var(--font1);
   min-height: 100vh;
-  max-width: 70vw;
+  max-width: 62vw;
   display: inline-block;
   position: relative;
   left: 50%;
@@ -26,14 +26,15 @@ main {
 
 h1 {
   font-size: max(2vw, 14px);
-  font-family: var(--font3);
+  font-family: var(--font2);
   letter-spacing: 1px;
   text-align: center;
   padding: 40px 0 80px 0;
 }
 
 h2 {
-  font-size: max(1.2vw, 12px);
+  font-family: var(--font3);
+  font-size: max(1.2vw, 11px);
 }
 
 .ul {
@@ -44,8 +45,7 @@ h2 {
 
 .ul li {
   position: relative;
-  padding-bottom: 10px;
-  padding-top: 18px;
+  padding: 30px 10px 20px 10px;
   backdrop-filter: blur(100px);
   -webkit-backdrop-filter: blur(100px);
 }
@@ -57,8 +57,8 @@ h2 {
   transform: translateX(-50%);
   top: 0px;
   /*Positionne verticalement la bordure plus la valeur négative est élevée, plus la bordure s'éloigne du bouton.*/
-  width: 95%;
-  height: 2px;
+  width: 98%;
+  height: 1.5px;
   background: var(--quaternary-bg-color);
   box-shadow: 0 0 5px var(--quaternary-bg-color), 0 0 10px var(--quaternary-bg-color), 0 0 15px var(--quaternary-bg-color), 0 0 30px var(--quaternary-bg-color);
 }
@@ -68,8 +68,8 @@ ul .li-noBorder {
 }
 ul .li-noBorder::after {
   top: -50px;
-  width: 10px;
-  height: 10px;
+  width: 5px;
+  height: 5px;
   border-radius:  50%;
 }
 
@@ -124,9 +124,10 @@ ul .li-noBorder::after {
 }
 
 p {
-  font-family: var(--font1);
+  font-family: var(--font3);
   font-size: max(1vw, 11px);
   color: var(--primary-bg-color-white);
+  text-shadow: 0px 0px 0px var(--primary-bg-color-white);
   line-height: 26px;
   letter-spacing: 1px;
   position: relative;
@@ -139,7 +140,7 @@ p {
 }
 
 .transition, p, .ul li i:before, .ul li i:after {
-  transition: all 0.25s ease-in-out;
+  transition: all 0.55s ease-in-out;
 }
 
 .flipIn, h1, ul li {
@@ -188,7 +189,15 @@ p {
 
 @media only screen and (max-width: 700px) {
   main{
-    max-width: 95vw;
-    padding: 20px;
+    max-width: 99vw;
+    padding: 4px;
   }
+
+  h1 {
+    padding: 40px 0 20px 0;
+  }
+
+  ul .li-noBorder::after {
+  top: -10px;
+}
 }
