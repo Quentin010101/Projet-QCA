@@ -4,128 +4,103 @@
 }
 body {
   background-image: url("/Asset/circuits3b.png");
-  font-family: var(--font1);
+  font-family: var(--font2);
 }
 
 main {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 5vw;
   background: linear-gradient(
     180deg,
     var(--secondary-bg-color-opacity),
     var(--teriary-bg-color-opacity),
     var(--secondary-bg-color-opacity)
   );
-  padding-top: 25px;
-  min-height: 100vh;
 }
 
 /*-----------------------------TEXT_ICON_TITLE-----------------------------*/
 p,
 li {
-  font-size: max(0.9vw, 12px);
-}
-
-ul {
-  margin: 18px 0 0 15px;
+  font-size: var(--text-size);
+  line-height: 2vh;
 }
 
 .icon_recrut {
-  font-size: max(1vw, 13px);
+  font-size: var(--text-size);
   margin: 0 5vw;
 }
 .title {
-  margin-top: 50px;
   color: var(--primary-bg-color-white);
 }
 
 /*------------X----------------TEXT_LOGO_TITLE---------------X-------------*/
 
 /* -----------------------------ANNONCES EMPLOIS-----------------------------*/
-.list_annonce {
-  margin: 0 4vw;
-}
-
-.icon_recrut {
-  margin: 15px 2vw;
-}
-h1 {
-  margin: 6vw 0 2vw 0;
-}
-
-h2 {
-  margin: 0.5vw 0 0 2vw;
-  font-size: max(1.2vw, 16px);
-}
-
-h4 {
-  text-align: center;
-}
-.text_annonce {
-  margin: 1vw 2vw;
-}
-
-.bi-clock {
-  margin-left: 1vw;
-}
-
 .section_recrut {
+  margin: 1vw;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
 }
 
+.list_annonce {
+  margin: 0 4vw;
+}
+
+.icon_recrut,
+.text_annonce,
+h2,
+h1 {
+  margin: 1vw 2vw;
+}
+
 .annonce1,
 .annonce2,
-.annonce3 {
-  padding: 30px 10px 30px 10px;
+.annonce3
+ {
   margin-bottom: 1vw;
   width: 40vw;
-  min-width: 290px;
   backdrop-filter: blur(100px);
   -webkit-backdrop-filter: blur(100px);
-  position: relative;
+   position: relative;
+  /*box-shadow: 6px 6px 10px var(--quinternary-bg-color); */
   color: var(--primary-bg-color-white);
-
+  border: solid rgb(0, 0, 0) 1px;
   background: linear-gradient(
     0deg,
     rgba(18, 77, 120, 1) 0%,
     rgba(18, 77, 120, 1) 8%,
     rgba(0, 0, 0, 1) 100%
   );
-  border-radius: 20px;
-  border: none;
 }
 .annonce1::before,
-.annonce2::before,
-.annonce3::before {
-  content: "";
+.annonce2::before
+ {
+  content: '';
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  bottom: -10px;
+  bottom: -13px;
   /*Positionne verticalement la bordure plus la valeur négative est élevée, plus la bordure s'éloigne du bouton.*/
   width: 80%;
   height: 2px;
-  background: var(--quaternary-bg-color);
-  box-shadow: 0 0 5px var(--quaternary-bg-color),
-    0 0 10px var(--quaternary-bg-color), 0 0 15px var(--quaternary-bg-color),
-    0 0 30px var(--quaternary-bg-color);
 }
 
-.annonce3::before {
-  display: none;
+.annonce1::before,
+.annonce2::before{
+  background: var(--quaternary-bg-color);
+  box-shadow: 0 0 5px var(--quaternary-bg-color), 0 0 10px var(--quaternary-bg-color), 0 0 15px var(--quaternary-bg-color), 0 0 30px var(--quaternary-bg-color);
 }
 
 button {
-  min-width: 6.5vw;
+  width: 7.8vw;
   padding: 0.4vw;
   border: none;
   display: flex;
   align-items: center;
-  border-radius: 20px;
   justify-content: center;
   background-color: var(--quinternary-bg-color);
 }
@@ -133,13 +108,12 @@ button {
 .button_recrut {
   display: flex;
   flex-direction: row;
-  margin: 1vw 2vw 0.5vw;
+  margin: -1.5vw 2vw 0.5vw;
   justify-content: flex-end;
 }
 
 .postuler {
   font-size: max(0.8vw, 10px);
-  font-weight: bold;
 }
 
 .offre {
@@ -148,15 +122,7 @@ button {
   align-items: flex-start;
   justify-content: space-around;
 }
-
-Pagerecrute {
-  min-width: 295px;
-  max-width: 295px;
-  min-height: 150px;
-  max-height: 150px;
-}
-
-/*-----------X--------------ANNONCES EMPLOIS--------------X--------------*/
+/*--------------X--------------ANNONCES EMPLOIS--------------X--------------*/
 
 /*-----------------------------DEPOSE CV ET ALERTE ANNONCE-----------------------------*/
 .container_cv {
@@ -164,6 +130,7 @@ Pagerecrute {
   display: flex;
   align-items: flex-end;
   flex-direction: column;
+  justify-content: space-evenly;
 }
 
 .icon_alert {
@@ -172,25 +139,16 @@ Pagerecrute {
 }
 
 .alert_recrut,
-.alert_recrut2,
 .inscription_alert {
   width: 25vw;
   display: flex;
   margin-bottom: 1vw;
   align-items: center;
-  border-radius: 20px;
   flex-direction: column;
 }
 
 .alert_recrut {
-  margin-top: 150px;
-  border: rgb(255, 255, 255) solid 1px;
-  background: var(--primary-bg-color-white);
-  box-shadow: 4px 4px 10px var(--quinternary-bg-color);
-}
-
-.alert_recrut2 {
-  margin-top: 20px;
+  margin-top: 4vw;
   border: rgb(255, 255, 255) solid 1px;
   background: var(--primary-bg-color-white);
   box-shadow: 4px 4px 10px var(--quinternary-bg-color);
@@ -198,7 +156,7 @@ Pagerecrute {
 
 .alert_recrut_para {
   padding: 0 1vw;
-  margin: 0.5vw 0 0.5vw;
+  margin: 1vw 0 1vw;
 }
 
 img {
@@ -226,6 +184,7 @@ img {
   width: 25%;
   height: 25%;
   top: 15%;
+  
 }
 
 h3 {
@@ -249,23 +208,18 @@ textarea {
 }
 
 button:hover {
-  background: var(--teriary-bg-color);
+  background:var(--teriary-bg-color);
   color: var(--primary-bg-color-white);
 }
-
-.button_pull {
-  display: flex;
-  justify-content: center;
-}
-
+ .button_pull{
+   display: flex;
+   justify-content: center;
+ }
 /*-------------x--------------- POPUP *----------------x------------*/
 
-/*----------------------------- Media query----------------------------- */
-@media only screen and (max-width: 665px) {
-  h2 {
-    text-align: center;
-  }
 
+/*----------------------------- Media query----------------------------- */
+@media only screen and (max-width: 680px) {
   main {
     padding-top: 30px;
   }
@@ -275,38 +229,50 @@ button:hover {
     width: 100%;
     margin: 0;
     padding-top: 25px;
-    align-items: center;
   }
 
-  .alert_recrut2,
-  .alert_recrut {
-    backdrop-filter: blur(100px);
-    -webkit-backdrop-filter: blur(100px);
-    position: relative;
-    padding: 10px;
+  .icon_recrut,
+  .text_annonce,
+  h2,
+  h1 {
+    font-size: max(1vw, 15px);
   }
 
-  .alert_recrut {
+  .alert_recrut,
+  .inscription_alert {
+    width: 40vw;
     margin-top: 0;
   }
-  .alert_recrut2 {
-    margin: 50px 0 60px;
+
+  .offre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media only screen and (max-width: 620px) {
+  main {
+    padding-top: 30px;
   }
 
-  .alert_recrut::before,
-  .alert_recrut2::before {
-    content: "";
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: -32px;
-    /*Positionne verticalement la bordure plus la valeur négative est élevée, plus la bordure s'éloigne du bouton.*/
-    width: 80%;
-    height: 2px;
-    background: var(--quaternary-bg-color);
-    box-shadow: 0 0 5px var(--quaternary-bg-color),
-      0 0 10px var(--quaternary-bg-color), 0 0 15px var(--quaternary-bg-color),
-      0 0 30px var(--quaternary-bg-color);
+  .section_recrut {
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+  }
+
+  .icon_recrut,
+  .text_annonce,
+  h2,
+  h1 {
+    font-size: max(1vw, 15px);
+  }
+
+  .alert_recrut,
+  .inscription_alert {
+    width: 40vw;
+    margin-top: 0;
   }
 
   .offre {
@@ -315,52 +281,14 @@ button:hover {
     align-items: center;
   }
 
-  .annonce1,
-  .annonce2,
-  .annonce3 {
-    margin-bottom: 50px;
-  }
-
-  .annonce3::before {
-    display: block;
-  }
-
-  .annonce1::before,
-  .annonce2::before,
-  .annonce3::before {
-    bottom: -26px;
-  }
-
-  .alert_recrut,
-  .alert_recrut2,
-  .inscription_alert {
-    min-width: 290px;
-  }
-
-  .container_cv {
-    align-items: center;
-  }
-
-  .alert_recrut_para {
-    margin: 5.5 vw 0 0 1.5vw;
-  }
-
-  #button1,
-  #button2,
-  #button3 {
-    padding: 2.5vw;
-  }
-
   .button_recrut {
-    display: flex;
-    flex-direction: row;
-    margin: 4vw 2vw 0.5vw;
     justify-content: center;
-  }
-  .icon_recrut {
+    padding-top: 15px;
   }
 }
 
 /*--------------X-------------- Media query------------------X---------- */
 
 /*--------------X--------------DEPOSE CV ET ALERTE ANNONCE--------------X--------------*/
+
+/* -----------------------------FORMULAIRE POP-UP----------------------------- */
