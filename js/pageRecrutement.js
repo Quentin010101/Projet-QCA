@@ -59,4 +59,9 @@ popup.style.display = "block";
 }
 )
 
-
+// Button ENVOYER close/formulaire
+const buttonform = document.getElementById("button_form");
+buttonform.addEventListener("click", function(){
+  popup.style.display = "none";
+}
+)
