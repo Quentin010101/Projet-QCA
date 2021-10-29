@@ -41,27 +41,22 @@ function closeMenu() {
 
 // Formulaire Pop-up
 const button1 = document.getElementById("button1");
-const popup = document.querySelector(".popup");
+const overlay = document.querySelector(".overlay");
 button1.addEventListener("click", function(){
-popup.style.display = "block";
+overlay.style.display = "flex";
 }
 )
 
 const button2 = document.getElementById("button2");
 button2.addEventListener("click", function(){
-popup.style.display = "block";
+overlay.style.display = "flex";
 }
 )
 
 const button3 = document.getElementById("button3");
 button3.addEventListener("click", function(){
-popup.style.display = "block";
+overlay.style.display = "flex";
 }
 )
 
-// Button ENVOYER close/formulaire
-const buttonform = document.getElementById("button_form");
-buttonform.addEventListener("click", function(){
-  popup.style.display = "none";
-}
-)
+
