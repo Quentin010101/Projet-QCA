@@ -5,9 +5,18 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/css/general.css" />
+<<<<<<< HEAD
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./css/general.css" />
     <link rel="stylesheet" href="./css/CSS-header-footer-blur.css">
-    <link rel="stylesheet" href="/css/PageRecrutement.css" />
+    <link rel="stylesheet" href="./css/PageRecrutement.css" />
+=======
+    <link rel="stylesheet" href="./css/general.css" />
+    <link rel="stylesheet" href="./css/CSS-header-footer-blur.css">
+    <link rel="stylesheet" href="./css/PageRecrutement.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css">
+
+>>>>>>> d51149a9132771cace93e3bf8c7fabd8b985718b
     <title>Recrutement</title>
 </head>
 
@@ -15,7 +24,7 @@
     <header>
         <nav id="navbar">
             <figure class="a-logo">
-                <img class="img-logo" src="Asset/logo-bleu.png" alt="logo" />
+                <img class="img-logo" src="./Asset/logo-bleu.png" alt="logo" />
             </figure>
             <div id="navbar-nav">
                 <ul class="ul-nav container">
@@ -60,6 +69,7 @@
 
 
 
+
                 <!-- PREMIERE ANNONCE -->
                 <div class="annonce1">
                     <h2>Chef de projet informatique H/F</h2>
@@ -89,7 +99,7 @@
                 </div>
                 <!--x-- PREMIERE ANNONCE --x-->
 
-                
+
 
 
 
@@ -110,7 +120,7 @@
                     </div>
                     <div class="list_annonce">
                         <ul>
-                            <li>Fabricant français de carte g raphique/GPU.</li>
+                            <li id="annonce123">Fabricant français de carte graphique/GPU.</li>
                             <li>Ingénieur développement logiciel.</li>
                         </ul>
                     </div>
@@ -156,32 +166,33 @@
             </div>
             <!--x-- TROISIEME ANNONCE --x-->
 
+
+
+
             <!-- Formulaire Pop-pup -->
-            <div class="popup">
+            <div class="overlay">
+                <div class="popup">
+                    <form>
+                        <h3>NOUS REJOINDRE</h3>
+                        <label for="Nom">Nom*</label>
+                        <input type="text" id="nom" name="nom" placeholder="Votre nom" required><br>
 
-                <form action="form_recrut">
-                    <h3>NOUS REJOINDRE</h3>
-                    <label for="Nom">Nom*</label>
-                    <input type="text" id="nom" name="nom" placeholder="Votre nom" required><br>
+                        <label for="Prenom">Prenom*</label>
+                        <input type="text" id="prenom" name="prenom" placeholder="Votre prenom" required><br>
 
-                    <label for="Prenom">Prenom*</label>
-                    <input type="text" id="prenom" name="prenom" placeholder="Votre prenom" required><br>
+                        <label for="email">Email*</label>
+                        <input type="email" id="email" name="email" placeholder="Votre email " required><br>
 
-                    <label for="email">Email*</label>
-                    <input type="email" id="email" name="email" placeholder="Votre email " required><br>
+                        <span>Message</span>
+                        <div>
+                            <textarea rows="4"></textarea>
+                        </div>
+                        <div class="button_pull">
+                            <button id="button_form" type="submit" href="" value="valider">ENVOYER</button>
+                        </div>
 
-                    <label for="cv">Cv</label>
-                    <input type="file" id="cv" name="cv">
-
-                    <span>Message</span>
-                    <div>
-                        <textarea rows="4"></textarea>
-                    </div>
-                    <div class="button_pull">
-                        <button id="button_form" type="submit" href="/" value="valider">ENVOYER</button>
-                    </div>
-                    
-                </form>
+                    </form>
+                </div>
             </div>
 
 
@@ -192,7 +203,7 @@
                 <!-- ALERTE EMPLOI-->
                 <div class="alert_recrut">
                     <div class="icon_alert">
-                        <img src="/Asset/bi bi-bell.png" alt="bi-bell">
+                        <img src="./Asset/bi bi-bell.png" alt="bi-bell">
                     </div>
                     <div class="inscription_alert">
                         <h4>Créer une alerte emploi</h4>
@@ -203,10 +214,11 @@
 
                 </div>
                 <!-- DEPOT CV -->
-                <div class="alert_recrut" id="depot_cv">
+                <div class="alert_recrut2" id="depot_cv">
                     <div class="icon_alert">
-                        <img src="/Asset/bi bi-person-rolodex.png" alt="bi-person-rolodex">
+                        <img src="./Asset/bi bi-person-rolodex.png" alt="bi-person-rolodex">
                     </div>
+
                     <div class="inscription_alert">
                         <h4>Déposer votre CV</h4>
                         <p class="alert_recrut_para">Déposez voter Cv et nous vous contacterons dès la parution de
@@ -223,10 +235,10 @@
 
     <footer class="row center">
 
-        <a href="accueil.html" class="a-logoFoot"><img class="img-logo" src="Asset/logo-bleu.png" alt="logo" /></a>
+        <a href="accueil.html" class="a-logoFoot"><img class="img-logo" src="./Asset/logo-bleu.png" alt="logo" /></a>
         <div class="column center">
             <ul class="mentions row center">
-                <li><a href="confidentialité.html">Confidentialité</a></li>
+                <li><a href="confidentialite.html">Confidentialité</a></li>
                 <li><a href="#">Mentions légales</a></li>
                 <li><a href="pageAdministrateur.html">Administration</a></li>
 
@@ -266,9 +278,10 @@
         </div>
 
     </footer>
-  
+
     <script src="./js/localStorage.js"></script>
-    <script src="/js/pageRecrutement.js"></script>
+    <script src="./js/pageRecrutement.js"></script>
+
 
 </body>
 
